@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InnoDesign</title>
+    <meta name="description" content="Transformamos ideas en soluciones digitales con un diseño inspirado en la estética moderna y oscura de n8n.io.">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Inter & Source Code Pro -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        /* Estilo para el gradiente radial del fondo */
+        body {
+            background-image: radial-gradient(circle at center, #431967, #0f0119);
+        }
+
+        /* Clase para la tipografía de acento */
+        .font-source-code {
+            font-family: "Source Code Pro", monospace;
+        }
+
+        /* Animación de máquina de escribir */
+        .typewriter-effect {
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 0.15em solid #9D40FF; /* Cursor */
+            animation: typing 3s steps(30, end) forwards, blink-caret .75s step-end infinite;
+            width: 0;
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #9D40FF; }
+        }
+
+        /* Animación para el carrusel de logos */
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-200 bg-fixed">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-black/30 backdrop-blur-lg border-b border-white/10">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="text-2xl font-bold flex items-center">
+                <img src="src/img/Innodesign.png" alt="InnoDesign Logo" class="h-8 w-auto mr-2">
+                <span class="text-white">InnoDesign</span>
+            </a>
+            <!-- Navigation Links -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#servicios" class="hover:text-[#9D40FF] transition-colors duration-300">Servicios</a>
+                <a href="portafolio.html" class="hover:text-[#9D40FF] transition-colors duration-300">Portafolio</a>
+                <a href="#proceso" class="hover:text-[#9D40FF] transition-colors duration-300">Proceso</a>
+            </div>
+            <!-- CTA Button -->
+            <a href="#contacto" class="hidden md:block bg-[#9D40FF] hover:bg-purple-500 text-white font-semibold px-5 py-2 rounded-lg transition-colors duration-300">
+                Contacto
+            </a>
+        </nav>
+    </header>
+
+    <!-- Hero Section Full Width -->
+    <section id="home" class="relative min-h-screen flex items-center" style="background-image: url('src/img/header1.jpg'); background-size: cover; background-position: center;">
+        <div class="absolute inset-0 bg-black/60"></div> <!-- Overlay -->
+        <div class="relative w-full text-center px-6"> <!-- Centering container -->
+            <div class="bg-black/20 backdrop-blur-lg rounded-2xl border border-white/20 p-8 md:p-12 shadow-lg max-w-5xl mx-auto"> <!-- Removed inline-block and added max-width -->
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4">
+                    Tu negocio merece una web <br class="hidden md:block">
+                    <span class="bg-gradient-to-r from-[#9D40FF] to-[#00C4B4] text-transparent bg-clip-text font-source-code typewriter-effect">profesional y moderna</span>
+                </h1>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto mt-6 text-gray-300">
+                    Diseñamos sitios web estratégicos que generan confianza, reflejan la calidad de tu marca y convierten visitas en oportunidades reales de venta.
+                </p>
+                <div class="mt-10">
+                    <a href="#portafolio" class="bg-[#9D40FF] hover:bg-purple-500 text-white font-bold py-3 px-8 rounded-full transition duration-300 ease-in-out transform hover:scale-105">
+                        Ver Proyectos
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="container mx-auto px-6 py-16">
+
+        <!-- Features Section (Glassmorphism) -->
+        <section id="servicios" class="py-20">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-white">Webs a Medida para Potenciar tu Marca</h2>
+                <p class="text-lg mt-4 text-gray-400">Con nuestras páginas web, lograrás:</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-black/20 backdrop-blur-lg rounded-2xl border border-white/20 p-8 shadow-lg text-center">
+                    <div class="mx-auto mb-6 w-16 h-16 flex items-center justify-center bg-black/20 rounded-xl">
+                        <i class="fas fa-shield-alt text-3xl text-[#9D40FF]"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-white">Genera Credibilidad</h3>
+                    <p class="text-gray-300">Un diseño web atractivo y profesional es clave para construir la confianza de tus clientes.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-black/20 backdrop-blur-lg rounded-2xl border border-white/20 p-8 shadow-lg text-center">
+                    <div class="mx-auto mb-6 w-16 h-16 flex items-center justify-center bg-black/20 rounded-xl">
+                        <i class="fas fa-signature text-3xl text-[#9D40FF]"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-white">Refuerza tu Identidad</h3>
+                    <p class="text-gray-300">Proyecta una imagen sólida y profesional, diferenciándote de la competencia.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-black/20 backdrop-blur-lg rounded-2xl border border-white/20 p-8 shadow-lg text-center">
+                    <div class="mx-auto mb-6 w-16 h-16 flex items-center justify-center bg-black/20 rounded-xl">
+                        <i class="fas fa-bullseye text-3xl text-[#9D40FF]"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-white">Amplía tu Alcance</h3>
+                    <p class="text-gray-300">Optimizamos tu presencia online para atraer nuevos clientes y lograr resultados tangibles.</p>
+                </div>
+            </div>
+        </section>
+
+        <hr class="w-48 h-1 mx-auto bg-white/10 border-0 rounded-full blur-sm">
+
+        <!-- Portfolio Section -->
+        <section id="portafolio" class="py-20">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-white">Últimos Proyectos</h2>
+                <p class="text-lg mt-4 text-gray-400">Un vistazo a nuestro trabajo más reciente.</p>
+            </div>
+
+            <!-- Client Logos Marquee -->
+            <div class="py-8">
+                <h3 class="text-center text-xl font-semibold text-gray-400 mb-8">Hemos colaborado con grandes marcas</h3>
+                <div class="relative w-full overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]">
+                    <div class="flex w-max animate-[scroll_30s_linear_infinite]">
+                        <!-- Logos (Set 1) -->
+                        <div class="flex items-center justify-center px-12">
+                            <i class="fab fa-apple fa-4x text-gray-500"></i>
+                        </div>
+                        <div class="flex items-center justify-center px-12">
+                            <i class="fab fa-google fa-4x text-gray-500"></i>
+                        </div>
+                        <div class="flex items-center justify-center px-12">
+                            <i class="fab fa-microsoft fa-4x text-gray-500"></i>
+                        </div>
+                        <div class="flex items-center justify-center px-12">
+                            <i class="fab fa-spotify fa-4x text-gray-500"></i>
+                        </div>
+                        <div class="flex items-center justify-center px-12">
+                            <i class="fab fa-amazon fa-4x text-gray-500"></i>
+                        </div>
+                        <div class="flex items-center justify-center px-12">
+                            <i class="fab fa-meta fa-4x text-gray-500"></i>
+                        </div>
+                        
+                        <!-- Logos (Set 2 - Duplicate for seamless scroll) -->
+                        <div class="flex items-center justify-center px-12">
+                            <i class="fab fa-apple fa-4x text-gray-500"></i>
+                        </div>
+                        <div class="flex items-center justify-center px-12">
+                            <i class="fab fa-google fa-4x text-gray-500"></i>
+                        </div>
+                        <div class="flex items-center justify-center px-12">
+                            <i class="fab fa-microsoft fa-4x text-gray-500"></i>
+                        </div>
+                        <div class="flex items-center justify-center px-12">
+                            <i class="fab fa-spotify fa-4x text-gray-500"></i>
+                        </div>
+                        <div class="flex items-center justify-center px-12">
+                            <i class="fab fa-amazon fa-4x text-gray-500"></i>
+                        </div>
+                        <div class="flex items-center justify-center px-12">
+                            <i class="fab fa-meta fa-4x text-gray-500"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="space-y-12">
+                <!-- Project Card -->
+                <div class="bg-black/20 backdrop-blur-lg rounded-2xl border border-white/20 shadow-lg overflow-hidden md:flex items-center">
+                    <div class="md:w-1/2">
+                        <img src="https://via.placeholder.com/800x600.png/0f0119/9D40FF?text=Proyecto+Alfa" alt="Proyecto Alfa" class="w-full h-full object-cover">
+                    </div>
+                    <div class="md:w-1/2 p-8 md:p-12">
+                        <h3 class="text-2xl font-bold text-white">Plataforma E-commerce</h3>
+                        <p class="mt-4 mb-6 text-gray-300">Desarrollo completo de una tienda online con panel de administración, integración de pagos y diseño responsive.</p>
+                        <div class="flex items-center space-x-4 text-gray-400">
+                            <span class="font-semibold text-gray-200">Tecnologías:</span>
+                            <i class="fab fa-react text-2xl" title="React"></i>
+                            <i class="fab fa-node-js text-2xl" title="Node.js"></i>
+                            <i class="fab fa-figma text-2xl" title="Figma"></i>
+                        </div>
+                    </div>
+                </div>
+                 <!-- Project Card 2 -->
+                <div class="bg-black/20 backdrop-blur-lg rounded-2xl border border-white/20 shadow-lg overflow-hidden md:flex items-center">
+                    <div class="md:w-1/2 md:order-2">
+                        <img src="https://via.placeholder.com/800x600.png/0f0119/00C4B4?text=Proyecto+Beta" alt="Proyecto Beta" class="w-full h-full object-cover">
+                    </div>
+                    <div class="md:w-1/2 p-8 md:p-12 md:order-1">
+                        <h3 class="text-2xl font-bold text-white">Aplicación de Fitness</h3>
+                        <p class="mt-4 mb-6 text-gray-300">App móvil híbrida para seguimiento de rutinas, progreso y conexión con entrenadores personales.</p>
+                        <div class="flex items-center space-x-4 text-gray-400">
+                            <span class="font-semibold text-gray-200">Tecnologías:</span>
+                            <i class="fab fa-vuejs text-2xl" title="Vue.js"></i>
+                            <i class="fab fa-python text-2xl" title="Python"></i>
+                            <i class="fas fa-database text-2xl" title="SQL"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="w-48 h-1 mx-auto bg-white/10 border-0 rounded-full blur-sm">
+
+        <!-- Process Section -->
+        <section id="proceso" class="py-20">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-white">Nuestro Proceso de Trabajo</h2>
+                <p class="text-lg mt-4 text-gray-400">Eficiencia y colaboración para garantizar resultados de alta calidad.</p>
+            </div>
+            <div class="max-w-4xl mx-auto bg-black/20 backdrop-blur-lg rounded-2xl border border-white/20 p-10 shadow-lg">
+                <p class="text-center text-gray-300">Aquí describiríamos nuestro proceso detallado, desde la consulta inicial y la planificación, pasando por el diseño y desarrollo, hasta el lanzamiento y soporte. Usaríamos iconos y una línea de tiempo visual para que sea fácil de entender.</p>
+            </div>
+        </section>
+
+        <hr class="w-48 h-1 mx-auto bg-white/10 border-0 rounded-full blur-sm">
+
+        <!-- Contact Section -->
+        <section id="contacto" class="py-20">
+            <div class="max-w-2xl mx-auto text-center">
+                 <h2 class="text-3xl font-bold text-white">Hablemos de tu Proyecto</h2>
+                 <p class="text-lg mt-4 mb-8 text-gray-400">¿Listo para empezar? Envíanos un mensaje y te responderemos a la brevedad.</p>
+            </div>
+            <div class="max-w-2xl mx-auto bg-black/20 backdrop-blur-lg rounded-2xl border border-white/20 p-8 shadow-lg">
+                <form action="https://formspree.io/f/karlosf@gmail.com" method="POST">
+                    <div class="mb-5">
+                        <input type="text" name="name" placeholder="Tu nombre completo" class="w-full px-4 py-3 bg-black/20 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#9D40FF] transition-all">
+                    </div>
+                    <div class="mb-5">
+                        <input type="email" name="email" placeholder="tu@email.com" class="w-full px-4 py-3 bg-black/20 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#9D40FF] transition-all">
+                    </div>
+                    <div class="mb-6">
+                        <textarea name="message" rows="5" placeholder="Cuéntanos sobre tu idea..." class="w-full px-4 py-3 bg-black/20 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#9D40FF] transition-all"></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="bg-[#9D40FF] hover:bg-purple-500 text-white font-bold py-3 px-10 rounded-full transition duration-300 ease-in-out transform hover:scale-105">
+                            Enviar Mensaje
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/20 mt-20">
+        <div class="container mx-auto px-6 py-8 text-center text-gray-400">
+            <div class="flex justify-center mb-4 space-x-6">
+                <a href="https://www.instagram.com/f_carlitos/" target="_blank" class="hover:text-[#9D40FF] transition-colors"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="https://www.linkedin.com/in/carlos-mart%C3%ADn-folla-b137301a/" target="_blank" class="hover:text-[#9D40FF] transition-colors"><i class="fab fa-linkedin-in fa-2x"></i></a>
+                <a href="https://github.com/Karlosmf" target="_blank" class="hover:text-[#9D40FF] transition-colors"><i class="fab fa-github fa-2x"></i></a>
+                <a href="mailto:karlosf@gmail.com" class="hover:text-[#9D40FF] transition-colors"><i class="fas fa-envelope fa-2x"></i></a>
+            </div>
+            <p>&copy; 2025 InnoDesign. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

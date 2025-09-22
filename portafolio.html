@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio - InnoDesign</title>
+    <meta name="description" content="Explora los proyectos de desarrollo web y de aplicaciones móviles realizados por InnoDesign.">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        /* Estilo para el gradiente radial del fondo */
+        body {
+            background-image: radial-gradient(circle at center, #431967, #0f0119);
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-200 bg-fixed">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-black/30 backdrop-blur-lg border-b border-white/10">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="index.html" class="text-2xl font-bold flex items-center">
+                <img src="src/img/Innodesign.png" alt="InnoDesign Logo" class="h-8 w-auto mr-2">
+                <span class="text-white">InnoDesign</span>
+            </a>
+            <!-- Navigation Links -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html#servicios" class="hover:text-[#9D40FF] transition-colors duration-300">Servicios</a>
+                <a href="portafolio.html" class="text-[#9D40FF] font-bold transition-colors duration-300">Portafolio</a>
+                <a href="index.html#proceso" class="hover:text-[#9D40FF] transition-colors duration-300">Proceso</a>
+            </div>
+            <!-- CTA Button -->
+            <a href="index.html#contacto" class="hidden md:block bg-[#9D40FF] hover:bg-purple-500 text-white font-semibold px-5 py-2 rounded-lg transition-colors duration-300">
+                Contacto
+            </a>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-20">
+        
+        <div class="text-center mb-16">
+            <h1 class="text-4xl md:text-5xl font-bold text-white">Nuestro Portafolio</h1>
+            <p class="text-lg mt-4 text-gray-400">Explora una selección de nuestros proyectos más destacados.</p>
+        </div>
+
+        <!-- Portfolio Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Project 1 -->
+            <div class="bg-black/20 backdrop-blur-lg rounded-2xl border border-white/20 shadow-lg overflow-hidden group">
+                <img src="https://via.placeholder.com/800x600.png/0f0119/9D40FF?text=Proyecto+Alfa" alt="Plataforma E-commerce" class="w-full h-56 object-cover transform group-hover:scale-105 transition-transform duration-300">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 text-white">Plataforma E-commerce</h3>
+                    <p class="text-gray-300 mb-4">Tienda online con panel de administración, pagos y diseño responsive.</p>
+                    <div class="flex items-center space-x-3 text-gray-400">
+                        <i class="fab fa-react text-2xl" title="React"></i>
+                        <i class="fab fa-node-js text-2xl" title="Node.js"></i>
+                        <i class="fab fa-figma text-2xl" title="Figma"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="bg-black/20 backdrop-blur-lg rounded-2xl border border-white/20 shadow-lg overflow-hidden group">
+                <img src="https://via.placeholder.com/800x600.png/0f0119/00C4B4?text=Proyecto+Beta" alt="Aplicación de Fitness" class="w-full h-56 object-cover transform group-hover:scale-105 transition-transform duration-300">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 text-white">Aplicación de Fitness</h3>
+                    <p class="text-gray-300 mb-4">App móvil híbrida para seguimiento de rutinas y conexión con entrenadores.</p>
+                    <div class="flex items-center space-x-3 text-gray-400">
+                        <i class="fab fa-vuejs text-2xl" title="Vue.js"></i>
+                        <i class="fab fa-python text-2xl" title="Python"></i>
+                        <i class="fas fa-database text-2xl" title="SQL"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="bg-black/20 backdrop-blur-lg rounded-2xl border border-white/20 shadow-lg overflow-hidden group">
+                <img src="https://via.placeholder.com/800x600.png/0f0119/9D40FF?text=Proyecto+Gamma" alt="Web Corporativa" class="w-full h-56 object-cover transform group-hover:scale-105 transition-transform duration-300">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 text-white">Web Corporativa</h3>
+                    <p class="text-gray-300 mb-4">Sitio web institucional para consultora internacional, enfocado en la confianza.</p>
+                    <div class="flex items-center space-x-3 text-gray-400">
+                        <i class="fab fa-html5 text-2xl" title="HTML5"></i>
+                        <i class="fab fa-css3-alt text-2xl" title="CSS3"></i>
+                        <i class="fab fa-js-square text-2xl" title="JavaScript"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="bg-black/20 backdrop-blur-lg rounded-2xl border border-white/20 shadow-lg overflow-hidden group">
+                <img src="https://via.placeholder.com/800x600.png/0f0119/00C4B4?text=Proyecto+Delta" alt="Dashboard de Analíticas" class="w-full h-56 object-cover transform group-hover:scale-105 transition-transform duration-300">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 text-white">Dashboard de Analíticas</h3>
+                    <p class="text-gray-300 mb-4">Visualización de datos en tiempo real para un cliente de Big Data.</p>
+                    <div class="flex items-center space-x-3 text-gray-400">
+                        <i class="fab fa-react text-2xl" title="React"></i>
+                        <i class="fas fa-chart-bar text-2xl" title="D3.js"></i>
+                        <i class="fab fa-figma text-2xl" title="Figma"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="bg-black/20 backdrop-blur-lg rounded-2xl border border-white/20 shadow-lg overflow-hidden group">
+                <img src="https://via.placeholder.com/800x600.png/0f0119/9D40FF?text=Proyecto+Epsilon" alt="App de Meditación" class="w-full h-56 object-cover transform group-hover:scale-105 transition-transform duration-300">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 text-white">App de Meditación</h3>
+                    <p class="text-gray-300 mb-4">Aplicación móvil para guiar a los usuarios en sesiones de meditación.</p>
+                    <div class="flex items-center space-x-3 text-gray-400">
+                        <i class="fab fa-react text-2xl" title="React Native"></i>
+                        <i class="fas fa-database text-2xl" title="Firebase"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 6 -->
+            <div class="bg-black/20 backdrop-blur-lg rounded-2xl border border-white/20 shadow-lg overflow-hidden group">
+                <img src="https://via.placeholder.com/800x600.png/0f0119/00C4B4?text=Proyecto+Zeta" alt="Landing Page para Evento" class="w-full h-56 object-cover transform group-hover:scale-105 transition-transform duration-300">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2 text-white">Landing Page para Evento</h3>
+                    <p class="text-gray-300 mb-4">Página de aterrizaje con animaciones avanzadas para un evento tecnológico.</p>
+                    <div class="flex items-center space-x-3 text-gray-400">
+                        <i class="fab fa-vuejs text-2xl" title="Vue.js"></i>
+                        <i class="fas fa-leaf text-2xl" title="GSAP"></i>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/20 mt-20">
+        <div class="container mx-auto px-6 py-8 text-center text-gray-400">
+            <div class="flex justify-center mb-4 space-x-6">
+                <a href="https://www.instagram.com/f_carlitos/" target="_blank" class="hover:text-[#9D40FF] transition-colors"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="https://www.linkedin.com/in/carlos-mart%C3%ADn-folla-b137301a/" target="_blank" class="hover:text-[#9D40FF] transition-colors"><i class="fab fa-linkedin-in fa-2x"></i></a>
+                <a href="https://github.com/Karlosmf" target="_blank" class="hover:text-[#9D40FF] transition-colors"><i class="fab fa-github fa-2x"></i></a>
+                <a href="mailto:karlosf@gmail.com" class="hover:text-[#9D40FF] transition-colors"><i class="fas fa-envelope fa-2x"></i></a>
+            </div>
+            <p>&copy; 2025 InnoDesign. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
