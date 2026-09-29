@@ -3,24 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InnoDesign</title>
-    <meta name="description" content="Transformamos ideas en soluciones digitales con un diseño inspirado en la estética moderna y oscura de n8n.io.">
+    <title>InnoDesign — Desarrollo Web a Medida | E-commerce, Sistemas y SEO | Para todo el país — Avellaneda y Reconquista, Santa Fe</title>
+    <meta name="description" content="Dúo creativo-técnico con base en Avellaneda y Reconquista, Santa Fe. Creamos páginas web a medida, e-commerce Webstore con facturación y sistemas SAE para todo el país, 100% remoto. Primero que funcione, luego bonito.">
+    <link rel="canonical" href="https://innodesing.com.ar/">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="author" content="InnoDesign — Carlos y Daniel">
+    <meta name="theme-color" content="#0f0119">
+    <link rel="icon" type="image/png" href="src/img/Innodesign.png">
+    <link rel="apple-touch-icon" href="src/img/Innodesign.png">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_AR">
+    <meta property="og:title" content="InnoDesign — Desarrollo Web a Medida | Para todo el país">
+    <meta property="og:description" content="Webs a medida, Webstore e-commerce y SAE educativo. Base en Santa Fe, trabajo remoto para toda Argentina.">
+    <meta property="og:url" content="https://innodesing.com.ar/">
+    <meta property="og:image" content="https://innodesing.com.ar/src/img/Innodesign.png">
+    <meta property="og:site_name" content="InnoDesign">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="InnoDesign — Desarrollo Web a Medida">
+    <meta name="twitter:description" content="Dúo creativo + técnico. E-commerce, integración y SEO para todo el país. Base Santa Fe, remoto Argentina.">
+    <meta name="twitter:image" content="https://innodesing.com.ar/src/img/Innodesign.png">
+    <!-- JSON-LD SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "InnoDesign",
+      "url": "https://innodesing.com.ar/",
+      "logo": "https://innodesing.com.ar/src/img/Innodesign.png",
+      "description": "Desarrollo web a medida, e-commerce Webstore y sistemas SAE. Dúo con base en Avellaneda y Reconquista, Santa Fe, trabajo remoto para toda Argentina.",
+      "founders": [{"@type":"Person","name":"Carlos"},{"@type":"Person","name":"Daniel"}],
+      "address": {"@type":"PostalAddress","addressRegion":"Santa Fe","addressLocality":"Avellaneda - Reconquista","addressCountry":"AR"},
+      "areaServed": {"@type":"Country","name":"Argentina"},
+      "contactPoint": {"@type":"ContactPoint","email":"karlosf@gmail.com","telephone":"+5493482644107","contactType":"customer service","availableLanguage":"es"}
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"WebSite",
+      "name":"InnoDesign",
+      "url":"https://innodesing.com.ar/",
+      "potentialAction":{"@type":"SearchAction","target":"https://innodesing.com.ar/?q={search_term_string}","query-input":"required name=search_term_string"}
+    }
+    </script>
+    <!-- Google Tag — reemplazá AW-XXXXXXXXXX por tu ID de Google Ads -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-XXXXXXXXXX');
+      // Conversión formulario (llamado desde JS al enviar) -> gtag('event','conversion',{'send_to':'AW-XXXXXXXXXX/XXXXXX'})
+    </script>
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Google Fonts: Inter & Source Code Pro -->
+    <!-- Google Fonts: 2 tipografías — Outfit + Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@300;500;700;900&display=swap" rel="stylesheet">
 
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
     <style>
-        /* Estilo para el gradiente radial del fondo */
+        /* 2026 — fondo + grano sutil profesional */
         body {
             background-image: radial-gradient(circle at center, #431967, #0f0119);
+            position: relative;
+        }
+        body::after {
+            content: '';
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            opacity: 0.035;
+            z-index: 1;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            mix-blend-mode: soft-light;
+        }
+        /* Scroll progress 2026 */
+        #scroll-progress {
+            position: fixed;
+            top: 0; left: 0;
+            height: 2px;
+            width: 0%;
+            background: linear-gradient(90deg, #2c5aa0, #f5a623);
+            z-index: 9999;
+            transform-origin: left;
+            transition: width 0.08s linear;
         }
 
         /* Clase para la tipografía de acento */
@@ -33,7 +110,7 @@
             display: inline-block;
             overflow: hidden;
             white-space: nowrap;
-            border-right: 0.15em solid #9D40FF; /* Cursor */
+            border-right: 0.15em solid #2c5aa0; /* Cursor */
             animation: typing 3s steps(30, end) forwards, blink-caret .75s step-end infinite;
             width: 0;
         }
@@ -45,7 +122,7 @@
 
         @keyframes blink-caret {
             from, to { border-color: transparent }
-            50% { border-color: #9D40FF; }
+            50% { border-color: #2c5aa0; }
         }
 
         /* Animación para el carrusel de logos */
@@ -53,47 +130,420 @@
             0% { transform: translateX(0); }
             100% { transform: translateX(-50%); }
         }
+        /* Logos clientes — filtro gris claro y tamaño uniforme */
+        .client-logo {
+            height: 2.5rem;
+            width: auto;
+            max-width: 160px;
+            object-fit: contain;
+            filter: grayscale(1) brightness(1.55) contrast(0.88) opacity(0.82);
+            transition: filter 0.35s ease, transform 0.35s ease, opacity 0.35s ease;
+        }
+        @media (min-width: 768px) { .client-logo { height: 3rem; } }
+        .client-logo:hover {
+            filter: grayscale(0) brightness(1) contrast(1) opacity(1);
+            transform: scale(1.04);
+        }
+
+        /* Circuit animation for service card hover */
+        @keyframes circuit-pulse {
+            0% { filter: opacity(1); }
+            50% { filter: opacity(0.5); transform: scale(1.05); }
+            100% { filter: opacity(1); }
+        }
+
+        /* Pulse on hover */
+        @keyframes circuit-reveal {
+            0% { background: transparent; }
+            100% { background: conic-gradient(from 0deg, #2c5aa0, #f5a623, #2c5aa0); }
+        }
+
+        .service-card {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: conic-gradient(from 0deg, #2c5aa0, #f5a623, #2c5aa0);
+            border-radius: inherit;
+            opacity: 0;
+            transition: opacity .4s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 1;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: rotate(0deg); }
+            50% { transform: rotate(360deg); }
+        }
+
+        /* Style C — Founder breathing (solo #about) */
+        @keyframes reactPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.15); }
+        }
+        @keyframes dbBlink {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.08); opacity: 0.85; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .react-icon, .database-icon { animation: none !important; }
+            .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+            .portfolio-card:hover { transform: none !important; }
+        }
+        /* Portfolio cards — rotación mínima y zoom */
+        .portfolio-card {
+            transition: transform 0.45s cubic-bezier(0.22,1,0.36,1), box-shadow 0.45s ease, border-color 0.3s ease;
+            will-change: transform;
+        }
+        .portfolio-card:hover {
+            transform: rotate(-0.6deg) scale(1.02);
+            box-shadow: 0 16px 36px -14px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.08) inset;
+        }
+        .portfolio-card .capture-wrap img {
+            transition: transform 0.6s cubic-bezier(0.22,1,0.36,1), filter 0.4s ease;
+        }
+        .portfolio-card:hover .capture-wrap img {
+            transform: scale(1.04);
+        }
+
+        /* === Tipografía — 2 familias + efectos/decoraciones === */
+        .font-outfit { font-family: "Outfit", sans-serif; }
+        .font-cormorant { font-family: "Outfit", sans-serif; font-style: italic; } /* mapeada a Outfit para mantener 2 fuentes */
+        .font-jetbrains { font-family: "Inter", sans-serif; letter-spacing: 0.14em; } /* mapeada a Inter para mantener 2 fuentes */
+        .display-hero {
+            font-family: "Outfit", sans-serif;
+            font-weight: 900;
+            font-size: clamp(2.75rem, 8vw, 6.5rem);
+            line-height: 0.9;
+            letter-spacing: -0.04em;
+            text-wrap: balance;
+        }
+        .display-hero .grad-shift {
+            background: linear-gradient(100deg, #2c5aa0 10%, #f5a623 35%, #9D40FF 65%, #2c5aa0 90%);
+            background-size: 200% 100%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            animation: gradShift 6s ease infinite;
+        }
+        @keyframes gradShift {
+            0%,100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        .eyebrow {
+            font-family: "Inter", sans-serif;
+            font-size: 0.68rem;
+            font-weight: 600;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: #f5a623;
+            position: relative;
+            display: inline-block;
+            padding-left: 1.6rem;
+        }
+        .eyebrow::before {
+            content: '';
+            position: absolute;
+            left: 0; top: 50%;
+            width: 1.1rem; height: 1px;
+            background: linear-gradient(90deg, #f5a623, transparent);
+            transform: translateY(-50%);
+        }
+        .section-title {
+            font-family: "Outfit", sans-serif;
+            font-size: clamp(1.75rem, 4vw, 2.75rem);
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            line-height: 1.05;
+        }
+        .section-title .accent {
+            font-family: "Outfit", sans-serif;
+            font-weight: 300;
+            font-style: italic;
+            color: #f5a623;
+            position: relative;
+            display: inline-block;
+        }
+        .section-title .accent::after {
+            content: '';
+            position: absolute;
+            left: 0; right: 0; bottom: -0.18em;
+            height: 6px;
+            background: linear-gradient(90deg, rgba(245,166,35,0.28), transparent 70%);
+            border-radius: 999px;
+            pointer-events: none;
+        }
+        /* Logo futurista 2026 — blanco plano */
+        .logo-futurist {
+            font-family: "Outfit", sans-serif;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            font-size: 1.55rem;
+            line-height: 1;
+            display: inline-flex;
+            align-items: baseline;
+            color: #fff;
+            text-shadow: 0 0 14px rgba(44,90,160,0.22);
+        }
+        .logo-design {
+            color: #fff;
+            position: relative;
+        }
+        .logo-design::after {
+            content: '';
+            position: absolute;
+            left: 0; right: 0; bottom: -3px;
+            height: 1px;
+            background: rgba(255,255,255,0.55);
+            opacity: 0.9;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.45s cubic-bezier(0.22,1,0.36,1);
+        }
+        .group:hover .logo-design::after { transform: scaleX(1); }
+        .logo-cursor {
+            color: #f5a623;
+            font-weight: 300;
+            margin-left: 1px;
+            animation: cursorBlink 1.15s step-end infinite;
+            text-shadow: 0 0 8px rgba(245,166,35,0.65);
+        }
+        @keyframes cursorBlink { 0%,50% { opacity: 1 } 51%,100% { opacity: 0 } }
+        /* efecto split por letra para hero */
+        .char { display: inline-block; will-change: transform, opacity; }
+        /* 2026 — spotlight sutil hero + magnetic buttons */
+        .spotlight {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(600px 320px at var(--mx,50%) var(--my,50%), rgba(245,166,35,0.08), transparent 60%),
+                        radial-gradient(700px 380px at calc(var(--mx,50%) + 18%) calc(var(--my,50%) + 12%), rgba(44,90,160,0.12), transparent 65%);
+            opacity: 0;
+            transition: opacity 0.6s ease;
+            pointer-events: none;
+        }
+        #home:hover .spotlight { opacity: 1; }
+        .magnetic { will-change: transform; transition: transform 0.18s ease; }
+        /* Bento sutil — borde interior + elevación contenida */
+        .bento { position: relative; overflow: hidden; }
+        .bento::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            background: linear-gradient(180deg, rgba(255,255,255,0.06), transparent 55%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            pointer-events: none;
+        }
+        .bento:hover::before { opacity: 1; }
+
+        /* === Cards — efectos modernos CSS nuevo === */
+        @property --angle { syntax: "<angle>"; inherits: false; initial-value: 0deg; }
+        .service-card {
+            --angle: 0deg;
+            border: 1px solid rgba(255,255,255,0.12);
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .service-card .icon-wrap {
+            transition: transform 0.5s cubic-bezier(0.22,1,0.36,1), filter 0.4s ease;
+            will-change: transform;
+        }
+        /* 2026 — cards portfolio elevación contenida ya definida arriba como .portfolio-card + .bento */
+        /* shine sweep */
+        .service-card .shine {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(105deg, transparent 30%, rgba(255,255,255,0.08) 45%, transparent 60%);
+            transform: translateX(-100%);
+            transition: transform 0.7s ease;
+            pointer-events: none;
+        }
+        .service-card:hover .shine { transform: translateX(100%); }
     </style>
 </head>
-<body class="font-sans text-gray-200 bg-fixed">
+<body class="font-sans text-gray-100 bg-fixed">
+    <div id="scroll-progress" aria-hidden="true"></div>
 
     <!-- Header -->
-    <header class="sticky top-0 z-50 bg-black/30 backdrop-blur-lg border-b border-white/10">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+    <header class="sticky top-0 z-50 bg-black/30 backdrop-blur-lg border-b border-white/10 relative overflow-hidden">
+        <div class="absolute inset-0 pointer-events-none -z-10 opacity-100" aria-hidden="true">
+            <div class="absolute -top-12 -left-12 w-48 h-48 rounded-full opacity-[0.07] blur-2xl" style="background: radial-gradient(circle at center, #2c5aa0 0%, transparent 70%); animation: spin 36s linear infinite;"></div>
+            <div class="absolute -bottom-10 -right-10 w-36 h-36 rounded-full opacity-[0.05] blur-2xl" style="background: radial-gradient(circle at center, #f5a623 0%, transparent 70%); animation: bounce 7s ease-in-out infinite;"></div>
+        </div>
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center relative z-10">
             <!-- Logo -->
-            <a href="#" class="text-2xl font-bold flex items-center">
+            <a href="#" class="text-2xl font-bold flex items-center group">
                 <img src="src/img/Innodesign.png" alt="InnoDesign Logo" class="h-8 w-auto mr-2">
-                <span class="text-white">InnoDesign</span>
+                <span class="logo-futurist">Inno<span class="logo-design">Design</span><span class="logo-cursor" aria-hidden="true">_</span></span>
             </a>
             <!-- Navigation Links -->
             <div class="hidden md:flex items-center space-x-8">
-                <a href="#servicios" class="hover:text-[#9D40FF] transition-colors duration-300">Servicios</a>
-                <a href="portafolio.html" class="hover:text-[#9D40FF] transition-colors duration-300">Portafolio</a>
-                <a href="#proceso" class="hover:text-[#9D40FF] transition-colors duration-300">Proceso</a>
+                <a href="#servicios" class="hover:text-[#2c5aa0] transition-colors duration-300">Servicios</a>
+                <a href="#portafolio" class="hover:text-[#2c5aa0] transition-colors duration-300">Portafolio</a>
+                <a href="#how-we-work" class="hover:text-[#2c5aa0] transition-colors duration-300">Proceso</a>
+                <a href="#clientes" class="hover:text-[#2c5aa0] transition-colors duration-300">Clientes</a>
+                <a href="#faq" class="hover:text-[#2c5aa0] transition-colors duration-300">FAQ</a>
             </div>
             <!-- CTA Button -->
-            <a href="#contacto" class="hidden md:block bg-[#9D40FF] hover:bg-purple-500 text-white font-semibold px-5 py-2 rounded-lg transition-colors duration-300">
-                Contacto
-            </a>
+<a href="#contacto" class="magnetic hidden md:block bg-amber-600 text-white font-semibold px-5 py-2 rounded-lg transition-colors duration-300 hover:shadow-xl hover:bg-amber-500 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2">
+                            Contacto
+                        </a>
         </nav>
     </header>
 
     <!-- Hero Section Full Width -->
-    <section id="home" class="relative min-h-screen flex items-center" style="background-image: url('src/img/header1.jpg'); background-size: cover; background-position: center;">
-        <div class="absolute inset-0 bg-black/60"></div> <!-- Overlay -->
-        <div class="relative w-full text-center px-6"> <!-- Centering container -->
-            <div class="bg-black/20 backdrop-blur-lg rounded-2xl border border-white/20 p-8 md:p-12 shadow-lg max-w-5xl mx-auto"> <!-- Removed inline-block and added max-width -->
-                <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4">
-                    Tu negocio merece una web <br class="hidden md:block">
-                    <span class="bg-gradient-to-r from-[#9D40FF] to-[#00C4B4] text-transparent bg-clip-text font-source-code typewriter-effect">profesional y moderna</span>
+    <section id="home" class="relative min-h-[80vh] flex items-center justify-center overflow-hidden" style="background: var(--bg-gradient);">
+        <div class="spotlight" aria-hidden="true"></div>
+        <div class="absolute inset-0 bg-black/80"></div>
+        <!-- Extruded 3D effect background -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full overflow-hidden opacity-90">
+            <div class="absolute inset-0 bg-gradient-to-br from-[#0f0119] to-[#1a0a2e]"></div>
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full grid grid-cols-12 grid-rows-12 gap-2" style="background: url('data:image/svg+xml,%3Csvg width=\"100%25%22 height=\"100%25%22 viewBox=\"0 0 100 100%22 xmlns=%22http://www.w3.org/2000%22%3E%3Cfilter id=%22blur%22%3E%3CfeGaussianBlur stdDeviation=%222%22/%3E%3C/filter%3E%3Cg filter=%22url(%23blur)%22%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%222%22 fill=%22%239D40FF%22/%3E%3C/circle%3E%3C/g%3E%3C/svg%3E') center/cover; animation: float-glow 20s ease-in-out infinite%22;"></div>
+        </div>
+        <!-- Floating decorative elements -->
+        <div class="absolute -top-4 -left-4 rounded-3xl w-64 h-64 bg-[#2c5aa0] opacity-20 blur-[80%]"></div>
+        <div class="absolute right-4 bottom-4 rounded-2xl w-32 h-32 bg-[#f5a623] opacity-10 blur-[60%]"></div>
+        <div class="absolute inset-0 pointer-events-none">
+            <animate id="float-glow" attributeName="opacity" values="0.3;0.7;0.3" dur="20s" repeatCount="indefinite"/>
+        </div>
+        <div class="relative w-full text-center px-6 md:p-10">
+            <div class="inline-block md:inline-block pt-8 md:pt-16">
+                <!-- Main title with extruded effect -->
+                <h1 id="hero-title" class="display-hero mb-6">
+                    <span class="relative z-10 block font-outfit font-light text-white/90 text-[0.45em] tracking-[0.18em] uppercase mb-2">Tu negocio</span>
+                    <span class="block grad-shift">
+                        Merece una web
+                    </span>
+                    <span class="relative z-10 block font-cormorant font-light italic text-white text-[0.55em] tracking-tight -mt-1"> innovadora</span>
                 </h1>
-                <p class="text-lg md:text-xl max-w-3xl mx-auto mt-6 text-gray-300">
-                    Diseñamos sitios web estratégicos que generan confianza, reflejan la calidad de tu marca y convierten visitas en oportunidades reales de venta.
+                <!-- Subtitle with gradient pulse -->
+                <p class="text-lg md:text-xl max-w-2xl mx-auto mt-8 text-gray-100/90 leading-relaxed text-balance">
+                    Transformamos ideas en soluciones digitales con diseño que <em class="font-cormorant text-white not-italic font-semibold">cautiva</em>, inspiración que impacta y conversiones que convencen.
                 </p>
-                <div class="mt-10">
-                    <a href="#portafolio" class="bg-[#9D40FF] hover:bg-purple-500 text-white font-bold py-3 px-8 rounded-full transition duration-300 ease-in-out transform hover:scale-105">
-                        Ver Proyectos
-                    </a>
+                <!-- CTA Buttons -->
+                <div class="mt-12 flex flex-col md:flex-row gap-4 justify-center">
+<a href="#servicios" class="magnetic bg-amber-600 text-white font-bold py-4 px-8 rounded-full transition-all duration-500 hover:shadow-xl hover:bg-amber-500 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2">
+                            <span>Conocer nuestros servicios</span>
+                            <svg class="inline-block -mr-1 w-4 h-4 arrow-down" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"/></svg>
+                        </a>
+<a href="#about" class="magnetic bg-transparent text-amber-600 font-bold py-4 px-8 rounded-full border-2 border-amber-600 transition-all duration-500 hover:bg-amber-600 hover:text-white transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2">
+                            <span>Sobre nosotros</span>
+                        </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Creative Development Showcase -->
+    <section id="creative-showcase" class="py-24 bg-gray-900/50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <p class="eyebrow mb-3">Proceso creativo</p>
+                        <h2 class="section-title text-white mb-6 leading-tight">
+                            Desarrollo Creativo<br class="hidden md:block"><span class="accent">que Transforma</span>
+                        </h2>
+                        <p class="text-gray-100 text-lg mb-8 leading-relax">
+                            No solo creamos sitios web. Diseñamos experiencias digitales que cuentan historias, guían al usuario y convierten cada interacción en una oportunidad de crecimiento para tu marca.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4 md:grid-cols-4">
+                            <div class="bg-white/10 rounded-xl p-6 border border-white/20 hover:border-[#2c5aa0] transition-colors duration-300 reveal">
+                                <div class="w-12 h-12 rounded-xl bg-[#2c5aa0] flex items-center justify-center mb-4">
+                                    <i class="fas fa-lightbulb text-white text-xl"></i>
+                                </div>
+                                <h3 class="font-bold text-white">Estrategia Digital</h3>
+                                <p class="text-gray-100 text-sm">Posicionamiento y diferencia competitiva</p>
+                            </div>
+                            <div class="bg-white/10 rounded-xl p-6 border white/20 hover:border-[#2c5aa0] transition-colors duration-300 reveal">
+                                <div class="w-12 h-12 rounded-xl bg-[#f5a623] flex items-center justify-center mb-4">
+                                    <i class="fas fa-rocket text-white text-xl"></i>
+                                </div>
+                                <h3 class="font-bold text-white">Experiencia de Usuario</h3>
+                                <p class="text-gray-100 text-sm">Diseño centrado en el usuario</p>
+                            </div>
+                            <div class="bg-white/10 rounded-xl p-6 border white/20 hover:border-[#2c5aa0] transition-colors duration-300 reveal">
+                                <div class="w-12 h-12 rounded-xl bg-purple-600 flex items-center justify-center mb-4">
+                                    <i class="fas fa-code text-white text-xl"></i>
+                                </div>
+                                <h3 class="font-bold text-white">Desarrollo Web</h3>
+                                <p class="text-gray-100 text-sm">Soluciones a medida</p>
+                            </div>
+                            <div class="bg-white/10 rounded-xl p-6 border white/20 hover:border-[#2c5aa0] transition-colors duration-300 reveal">
+                                <div class="w-12 h-12 rounded-xl bg-teal-500 flex items-center justify-center mb-4">
+                                    <i class="fas fa-designer-cap text-white text-xl"></i>
+                                </div>
+                                <h3 class="font-bold text-white">Creative Motion</h3>
+                                <p class="text-gray-100 text-sm">Animaciones que impactan</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div class="relative rounded-3xl w-full h-[450] md:h-[550] overflow-hidden bg-gradient-to-br from-[#1a0a2e] to-[#0f0119]">
+                            <div class="absolute top-0 left-0 right-0 bottom-0">
+                                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-3xl bg-[radial-gradient(circle_at_top_left,#2c5aa0_0,#0f0119_50%)] opacity-20 animate-spin"></div>
+                                <div class="absolute bottom-1/2 right-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 rounded-3xl bg-[radial-gradient(circle_at_bottom_right,#f5a623_0,#1a0a2e_50%)] opacity-15 animate-bounce" style="animation-duration: 3s;"></div>
+                            </div>
+                            <div class="relative z-10 p-8 flex items-center justify-center text-center">
+                                <div class="max-w-md">
+                                    <h3 class="text-3xl font-bold text-white mb-4">Nuestro Enfoque</h3>
+                                    <p class="text-gray-100 leading-relax">
+                                        Combinamos diseño estratégico con desarrollo técnico para crear experiencias digitales inolvidables.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Decorative 3D cubes -->
+                        <div class="absolute -top-4 -left-4 rounded-3xl w-24 h-24 bg-[#2c5aa0] opacity-10 blur-[40%]"></div>
+                        <div class="absolute right-4 bottom-4 rounded-2xl w-20 h-20 bg-[#f5a623] opacity-10 blur-[30%]"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- 3D Background Elements -->
+    <div class="fixed inset-0 pointer-events-none overflow-hidden md:top-1/4 md:left-1/4">
+      <!-- Cube 1: Large rotating cube -->
+      <div class="absolute -top-4 -left-4 rounded-3xl w-64 h-64 bg-[#2c5aa0] opacity-30 blur-[40%] z-10 transition-transform duration-500" id="cube-1" style="will-change: transform;"></div>
+      <!-- Cube 2: Small rotating cube -->
+      <div class="absolute right-4 bottom-4 rounded-2xl w-32 h-32 bg-[#f5a623] opacity-40 blur-[30%] z-10 transition-transform duration-500" id="cube-2" style="will-change: transform;"></div>
+      <!-- Subtle background gradient overlay -->
+      <div class="absolute inset-0 opacity-10 -z-10" style="background: radial-gradient(circle at 30% 20%, #2c5aa0 0%, transparent 50%), radial-gradient(circle at 70% 80%, #f5a623 0%, transparent 50%);"></div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-900/30">
+        <div class="container mx-auto px-6">
+            <div class="max-w-2xl mx-auto text-center">
+                <h2 class="text-3xl font-bold text-white mb-6">Quiénes Somos</h2>
+                <p class="text-lg text-gray-100 mb-2 max-w-2xl mx-auto">Somos un dúo con base en el norte de Santa Fe — <strong class="text-white font-semibold">Carlos</strong> y <strong class="text-white font-semibold">Daniel</strong> — y trabajamos <strong class="text-white">para todo el país</strong> de forma remota. Combinamos estética impecable con funcionalidad robusta para estar a la altura de cualquier desafío.</p>
+                <p class="font-cormorant italic text-[#f5a623] text-lg mb-8">“Primero hacer que funcione y luego dejarlo bonito”</p>
+                <div class="grid md:grid-cols-2 gap-8 md:gap-12 mx-auto w-full max-w-3xl text-left">
+                    <div class="bg-black/20 backdrop-blur-lg border border-white/10 rounded-2xl p-6">
+                        <h3 class="text-xl font-bold text-white mb-1">Carlos — Desarrollador Front-end</h3>
+                        <p class="font-jetbrains text-xs tracking-widest uppercase text-[#f5a623] mb-3">Avellaneda · En formación constante</p>
+                        <p class="text-gray-100 text-sm mb-4 leading-relaxed">Nuevo en el rubro, con capacitación constante y foco en interfaces intuitivas y animaciones cuidadas. Cada detalle visual está pensado para que la interacción fluya y guíe al usuario hacia sus objetivos.</p>
+                        <ul class="list-disc list-inside text-gray-100 space-y-1.5 text-sm">
+                            <li>Diseño visual estratégico</li>
+                            <li>Animaciones y microinteracciones</li>
+                            <li>Responsive Design</li>
+                            <li>Experiencia de usuario</li>
+                        </ul>
+                    </div>
+                    <div class="bg-black/20 backdrop-blur-lg border border-white/10 rounded-2xl p-6">
+                        <h3 class="text-xl font-bold text-white mb-1">Daniel — Desarrollador Back-end</h3>
+                        <p class="font-jetbrains text-xs tracking-widest uppercase text-[#2c5aa0] mb-3">Reconquista · Vasta experiencia</p>
+                        <p class="text-gray-100 text-sm mb-4 leading-relaxed">Vasta experiencia en el rubro y siempre a la vanguardia de las últimas tecnologías. Especializado en integración de sistemas, APIs y arquitectura de software, con un stack amplio adaptable a cada proyecto.</p>
+                        <ul class="list-disc list-inside text-gray-100 space-y-1.5 text-sm">
+                        <li>Integración de sistemas</li>
+                        <li>Desarrollo de APIs</li>
+                        <li>Arquitectura de software</li>
+                        <li>Laravel, Rust, Node.js, entre otras tecnologías</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -104,123 +554,318 @@
         <!-- Features Section (Glassmorphism) -->
         <section id="servicios" class="py-20">
             <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-white">Webs a Medida para Potenciar tu Marca</h2>
-                <p class="text-lg mt-4 text-gray-400">Con nuestras páginas web, lograrás:</p>
+                <p class="eyebrow mb-3">Servicios</p>
+                <h2 class="section-title text-white">Webs a Medida <span class="accent">para Potenciar tu Marca</span></h2>
+                <p class="text-lg mt-4 text-gray-100 font-light">Con nuestras páginas web, lograrás:</p>
             </div>
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Card 1 -->
-                <div class="bg-black/20 backdrop-blur-lg rounded-2xl border border-white/20 p-8 shadow-lg text-center">
-                    <div class="mx-auto mb-6 w-16 h-16 flex items-center justify-center bg-black/20 rounded-xl">
-                        <i class="fas fa-shield-alt text-3xl text-[#9D40FF]"></i>
+                <div class="bg-black/20 backdrop-blur-lg rounded-2xl border border-white/20 p-8 shadow-lg text-center service-card bento reveal">
+                    <div class="shine"></div>
+                    <div class="icon-wrap mx-auto mb-6 w-16 h-16 flex items-center justify-center bg-black/20 rounded-xl">
+                        <i class="fas fa-shield-alt text-3xl text-[#2c5aa0]"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-2 text-white">Genera Credibilidad</h3>
-                    <p class="text-gray-300">Un diseño web atractivo y profesional es clave para construir la confianza de tus clientes.</p>
+                    <h3 class="text-xl font-bold mb-2 text-white font-outfit">Genera <span class="font-cormorant italic font-normal text-[#f5a623]">Credibilidad</span></h3>
+                    <p class="text-gray-100">Un diseño web atractivo y profesional es clave para construir la confianza de tus clientes.</p>
                 </div>
                 <!-- Card 2 -->
-                <div class="bg-black/20 backdrop-blur-lg rounded-2xl border border-white/20 p-8 shadow-lg text-center">
-                    <div class="mx-auto mb-6 w-16 h-16 flex items-center justify-center bg-black/20 rounded-xl">
-                        <i class="fas fa-signature text-3xl text-[#9D40FF]"></i>
+                <div class="bg-black/20 backdrop-blur-lg rounded-2xl border border-white/20 p-8 shadow-lg text-center service-card bento reveal">
+                    <div class="shine"></div>
+                    <div class="icon-wrap mx-auto mb-6 w-16 h-16 flex items-center justify-center bg-black/20 rounded-xl">
+                        <i class="fas fa-signature text-3xl text-[#2c5aa0]"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-2 text-white">Refuerza tu Identidad</h3>
-                    <p class="text-gray-300">Proyecta una imagen sólida y profesional, diferenciándote de la competencia.</p>
+                    <h3 class="text-xl font-bold mb-2 text-white font-outfit">Refuerza tu <span class="font-cormorant italic font-normal text-[#f5a623]">Identidad</span></h3>
+                    <p class="text-gray-100">Proyecta una imagen sólida y profesional, diferenciándote de la competencia.</p>
                 </div>
                 <!-- Card 3 -->
-                <div class="bg-black/20 backdrop-blur-lg rounded-2xl border border-white/20 p-8 shadow-lg text-center">
-                    <div class="mx-auto mb-6 w-16 h-16 flex items-center justify-center bg-black/20 rounded-xl">
-                        <i class="fas fa-bullseye text-3xl text-[#9D40FF]"></i>
+                <div class="bg-black/20 backdrop-blur-lg rounded-2xl border border-white/20 p-8 shadow-lg text-center service-card bento reveal">
+                    <div class="shine"></div>
+                    <div class="icon-wrap mx-auto mb-6 w-16 h-16 flex items-center justify-center bg-black/20 rounded-xl">
+                        <i class="fas fa-bullseye text-3xl text-[#2c5aa0]"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-2 text-white">Amplía tu Alcance</h3>
-                    <p class="text-gray-300">Optimizamos tu presencia online para atraer nuevos clientes y lograr resultados tangibles.</p>
+                    <h3 class="text-xl font-bold mb-2 text-white font-outfit">Amplía tu <span class="font-cormorant italic font-normal text-[#f5a623]">Alcance</span></h3>
+                    <p class="text-gray-100">Optimizamos tu presencia online para atraer nuevos clientes y lograr resultados tangibles.</p>
                 </div>
             </div>
         </section>
 
         <hr class="w-48 h-1 mx-auto bg-white/10 border-0 rounded-full blur-sm">
 
-        <!-- Portfolio Section -->
+        <!-- GitHub Repositories Section -->
+        <section id="github" class="py-20 bg-black/20 backdrop-blur-lg relative overflow-hidden">
+            <div class="absolute inset-0 pointer-events-none opacity-[0.03]" style="background: radial-gradient(700px 400px at 80% 0%, #2c5aa0 0%, transparent 60%);"></div>
+            <div class="container mx-auto px-6 relative">
+                <div class="max-w-3xl mx-auto text-center mb-10">
+                    <p class="eyebrow mb-3">Foco actual</p>
+                    <h2 class="section-title text-white">En qué <span class="accent">estamos trabajando</span></h2>
+                    <p class="text-gray-100/80 mt-3 text-sm max-w-2xl mx-auto text-balance">Proyectos activos, stack en uso e ideas en exploración. Trabajo continuo, con foco en soluciones que aportan valor real a cada cliente.</p>
+                </div>
+
+                <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-6">
+                    <!-- Proyectos activos -->
+                    <div class="bg-black/30 backdrop-blur-lg rounded-2xl border border-white/10 p-6 flex flex-col hover:border-[#2c5aa0]/30 transition-colors reveal">
+                        <div class="w-10 h-10 rounded-xl bg-[#2c5aa0] flex items-center justify-center mb-4"><i class="ph ph-git-branch text-white text-xl"></i></div>
+                        <h3 class="text-lg font-bold text-white font-outfit">Proyectos activos</h3>
+                        <ul class="mt-3 space-y-2.5 text-sm flex-1">
+                            <li class="flex items-start gap-2"><span class="mt-1 w-2 h-2 rounded-full bg-emerald-400 shrink-0"></span><span><strong class="text-white">Webstore</strong> <span class="text-gray-100">— e-commerce con facturación integrada.</span> <span class="font-jetbrains text-[11px] px-1.5 py-0.5 rounded bg-emerald-400/15 text-emerald-300 border border-emerald-400/20">En producción</span></span></li>
+                            <li class="flex items-start gap-2"><span class="mt-1 w-2 h-2 rounded-full bg-[#f5a623] shrink-0"></span><span><strong class="text-white">SAE</strong> <span class="text-gray-100">— administración educativa.</span> <span class="font-jetbrains text-[11px] px-1.5 py-0.5 rounded bg-[#f5a623]/15 text-[#f5a623] border border-[#f5a623]/20">Iterando</span></span></li>
+                            <li class="flex items-start gap-2"><span class="mt-1 w-2 h-2 rounded-full bg-white/40 shrink-0"></span><span><strong class="text-white">Webs a medida</strong> <span class="text-gray-100">— lanzamientos mensuales.</span> <span class="font-jetbrains text-[11px] px-1.5 py-0.5 rounded bg-white/10 text-gray-100 border border-white/10">Continuo</span></span></li>
+                        </ul>
+                        <p class="font-jetbrains text-[11px] text-gray-100/50 mt-4">Últimos pushes: esta semana · Code review entre ambos</p>
+                    </div>
+
+                    <!-- Stack en uso -->
+                    <div class="bg-black/30 backdrop-blur-lg rounded-2xl border border-white/10 p-6 flex flex-col hover:border-[#f5a623]/30 transition-colors reveal">
+                        <div class="w-10 h-10 rounded-xl bg-[#f5a623] flex items-center justify-center mb-4"><i class="ph ph-stack text-black text-xl"></i></div>
+                        <h3 class="text-lg font-bold text-white font-outfit">Stack en uso</h3>
+                        <div class="mt-3 flex flex-wrap gap-1.5">
+                            <span class="px-2.5 py-1 rounded-full bg-white/10 border border-white/10 text-xs text-gray-100 font-jetbrains">Laravel</span>
+                            <span class="px-2.5 py-1 rounded-full bg-white/10 border border-white/10 text-xs text-gray-100 font-jetbrains">Rust</span>
+                            <span class="px-2.5 py-1 rounded-full bg-white/10 border border-white/10 text-xs text-gray-100 font-jetbrains">Node.js</span>
+                            <span class="px-2.5 py-1 rounded-full bg-white/10 border border-white/10 text-xs text-gray-100 font-jetbrains">React</span>
+                            <span class="px-2.5 py-1 rounded-full bg-white/10 border border-white/10 text-xs text-gray-100 font-jetbrains">WordPress</span>
+                            <span class="px-2.5 py-1 rounded-full bg-[#2c5aa0]/20 border border-[#2c5aa0]/30 text-xs text-white font-jetbrains">+ adaptable</span>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-white/10">
+                            <p class="font-jetbrains text-[11px] tracking-widest uppercase text-gray-100/60 mb-2">Actividad reciente</p>
+                            <div class="flex gap-1">
+                                <span class="h-2 flex-1 rounded bg-[#2c5aa0]"></span><span class="h-2 flex-1 rounded bg-[#2c5aa0]/70"></span><span class="h-2 flex-1 rounded bg-[#f5a623]"></span><span class="h-2 flex-1 rounded bg-white/20"></span><span class="h-2 flex-1 rounded bg-[#2c5aa0]"></span><span class="h-2 flex-1 rounded bg-white/10"></span><span class="h-2 flex-1 rounded bg-[#f5a623]/60"></span>
+                            </div>
+                            <p class="font-jetbrains text-[11px] text-gray-100/50 mt-1.5">Commits · Reviews · Fixes — flujo continuo</p>
+                        </div>
+                    </div>
+
+                    <!-- Ideas y próximos pasos -->
+                    <div class="bg-gradient-to-br from-[#f5a623]/10 to-[#2c5aa0]/10 backdrop-blur-lg rounded-2xl border border-white/10 p-6 flex flex-col hover:border-white/15 transition-colors reveal">
+                        <div class="w-10 h-10 rounded-xl bg-white flex items-center justify-center mb-4"><i class="ph ph-lightbulb text-black text-xl"></i></div>
+                        <h3 class="text-lg font-bold text-white font-outfit">Ideas en exploración</h3>
+                        <ul class="mt-3 space-y-2 text-sm text-gray-100">
+                            <li class="flex gap-2"><i class="ph ph-sparkle text-[#f5a623] mt-0.5"></i> <span>Automatización de facturación y stock para comercios.</span></li>
+                            <li class="flex gap-2"><i class="ph ph-sparkle text-[#f5a623] mt-0.5"></i> <span>Paneles de gestión livianos para instituciones.</span></li>
+                            <li class="flex gap-2"><i class="ph ph-sparkle text-[#f5a623] mt-0.5"></i> <span>Plantillas performantes con GSAP + Tailwind.</span></li>
+                        </ul>
+                        <a href="#contacto" class="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-[#f5a623] hover:text-white transition-colors"><i class="ph ph-paper-plane-tilt"></i> ¿Tenés una idea? Conversemos</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="portafolio" class="py-20">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-white">Últimos Proyectos</h2>
-                <p class="text-lg mt-4 text-gray-400">Un vistazo a nuestro trabajo más reciente.</p>
-            </div>
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-10 max-w-3xl mx-auto">
+                    <p class="eyebrow mb-3">Portafolio</p>
+                    <h2 class="section-title text-white">Proyectos <span class="accent">seleccionados</span></h2>
+                    <p class="text-gray-100/80 mt-3 text-sm text-balance">Análisis breve de cada cliente: qué resolvimos, cómo se ve y con qué tecnología. Proyecto destacado: <strong class="text-white">O. Agostini</strong>.</p>
+                </div>
 
-            <!-- Client Logos Marquee -->
-            <div class="py-8">
-                <h3 class="text-center text-xl font-semibold text-gray-400 mb-8">Hemos colaborado con grandes marcas</h3>
-                <div class="relative w-full overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]">
-                    <div class="flex w-max animate-[scroll_30s_linear_infinite]">
-                        <!-- Logos (Set 1) -->
-                        <div class="flex items-center justify-center px-12">
-                            <i class="fab fa-apple fa-4x text-gray-500"></i>
+                <!-- Destacado — O. Agostini -->
+                <div class="max-w-5xl mx-auto bg-black/30 backdrop-blur-lg rounded-3xl border border-[#f5a623]/20 overflow-hidden shadow-2xl reveal portfolio-card bento">
+                    <div class="grid lg:grid-cols-5">
+                        <div class="lg:col-span-3 relative bg-[#0f0119] p-0 overflow-hidden">
+                            <div class="absolute top-0 inset-x-0 h-8 bg-white/10 backdrop-blur flex items-center gap-1.5 px-3">
+                                <span class="w-2.5 h-2.5 rounded-full bg-white/20"></span><span class="w-2.5 h-2.5 rounded-full bg-white/20"></span><span class="w-2.5 h-2.5 rounded-full bg-white/20"></span>
+                                <span class="ml-3 text-[11px] font-jetbrains tracking-wide text-white/60">oagostini.com.ar — Webstore B2B</span>
+                                <span class="ml-auto text-[11px] font-jetbrains px-2 py-0.5 rounded-full bg-[#f5a623] text-black font-bold">Destacado</span>
+                            </div>
+                            <div class="pt-8">
+                                <a href="https://oagostini.com.ar/" target="_blank" class="relative w-full h-[280px] lg:h-[360px] bg-white overflow-hidden block capture-wrap">
+                                    <img src="assets/capturas/oagostini.jpg" alt="O. Agostini — captura home" class="w-full h-full object-cover object-top" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                    <div class="absolute inset-0 hidden items-center justify-center bg-white p-8"><img src="assets/logosclientes/oagostini.webp" alt="O. Agostini" class="max-h-20 w-auto object-contain"></div>
+                                </a>
+                                <div class="grid grid-cols-3 gap-2 p-3 bg-black/40">
+                                    <div class="rounded-lg bg-white/10 p-2 text-center"><p class="font-jetbrains text-[10px] text-white/60 uppercase tracking-widest">Catálogo</p><p class="text-sm font-bold text-white">2.000+ productos</p></div>
+                                    <div class="rounded-lg bg-white/10 p-2 text-center"><p class="font-jetbrains text-[10px] text-white/60 uppercase tracking-widest">Acceso</p><p class="text-sm font-bold text-white">Precios con login</p></div>
+                                    <div class="rounded-lg bg-white/10 p-2 text-center"><p class="font-jetbrains text-[10px] text-white/60 uppercase tracking-widest">Integración</p><p class="text-sm font-bold text-[#f5a623]">Facturación + Stock</p></div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="flex items-center justify-center px-12">
-                            <i class="fab fa-google fa-4x text-gray-500"></i>
-                        </div>
-                        <div class="flex items-center justify-center px-12">
-                            <i class="fab fa-microsoft fa-4x text-gray-500"></i>
-                        </div>
-                        <div class="flex items-center justify-center px-12">
-                            <i class="fab fa-spotify fa-4x text-gray-500"></i>
-                        </div>
-                        <div class="flex items-center justify-center px-12">
-                            <i class="fab fa-amazon fa-4x text-gray-500"></i>
-                        </div>
-                        <div class="flex items-center justify-center px-12">
-                            <i class="fab fa-meta fa-4x text-gray-500"></i>
-                        </div>
-                        
-                        <!-- Logos (Set 2 - Duplicate for seamless scroll) -->
-                        <div class="flex items-center justify-center px-12">
-                            <i class="fab fa-apple fa-4x text-gray-500"></i>
-                        </div>
-                        <div class="flex items-center justify-center px-12">
-                            <i class="fab fa-google fa-4x text-gray-500"></i>
-                        </div>
-                        <div class="flex items-center justify-center px-12">
-                            <i class="fab fa-microsoft fa-4x text-gray-500"></i>
-                        </div>
-                        <div class="flex items-center justify-center px-12">
-                            <i class="fab fa-spotify fa-4x text-gray-500"></i>
-                        </div>
-                        <div class="flex items-center justify-center px-12">
-                            <i class="fab fa-amazon fa-4x text-gray-500"></i>
-                        </div>
-                        <div class="flex items-center justify-center px-12">
-                            <i class="fab fa-meta fa-4x text-gray-500"></i>
+                        <div class="lg:col-span-2 p-7 lg:p-8 flex flex-col">
+                            <div class="flex items-center gap-2 mb-2">
+                                <img src="assets/logosclientes/oagostini.webp" alt="" class="h-7 w-auto bg-white rounded px-1.5 py-1">
+                                <span class="font-jetbrains text-[11px] tracking-widest uppercase text-[#f5a623]">Mayorista · Santa Fe</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white font-outfit leading-tight">O. Agostini Distribuciones</h3>
+                            <p class="text-sm text-[#f5a623] font-medium">Distribuidora de consumo masivo — plataforma B2B de alto volumen</p>
+                            <p class="text-gray-100 text-sm leading-relaxed mt-4">E-commerce mayorista con catálogo por categorías y marcas, buscador, slider promocional y carrito para pedidos de alto volumen. Precios visibles solo para usuarios registrados, gestión de ofertas, “20+1” y stock sincronizado.</p>
+                            <ul class="mt-4 space-y-1.5 text-sm text-gray-100">
+                                <li class="flex gap-2"><i class="ph ph-check-circle text-emerald-400 mt-0.5"></i><span>Catálogo masivo con filtros por categoría, marca e importación.</span></li>
+                                <li class="flex gap-2"><i class="ph ph-check-circle text-emerald-400 mt-0.5"></i><span>Integración con ERP de facturación y stock en tiempo real.</span></li>
+                                <li class="flex gap-2"><i class="ph ph-check-circle text-emerald-400 mt-0.5"></i><span>Performance optimizada para listados extensos y pedidos rápidos.</span></li>
+                            </ul>
+                            <div class="mt-5 flex flex-wrap gap-1.5">
+                                <span class="px-2.5 py-1 rounded-full bg-white/10 border border-white/10 text-xs font-jetbrains text-gray-100">Webstore</span>
+                                <span class="px-2.5 py-1 rounded-full bg-white/10 border border-white/10 text-xs font-jetbrains text-gray-100">Laravel</span>
+                                <span class="px-2.5 py-1 rounded-full bg-white/10 border border-white/10 text-xs font-jetbrains text-gray-100">MySQL</span>
+                                <span class="px-2.5 py-1 rounded-full bg-[#2c5aa0]/20 border border-[#2c5aa0]/30 text-xs font-jetbrains text-white">Integración ERP</span>
+                            </div>
+                            <a href="https://oagostini.com.ar/" target="_blank" class="mt-auto pt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-[#f5a623] hover:text-white transition-colors"><i class="ph ph-arrow-square-out"></i> Ver sitio — oagostini.com.ar</a>
                         </div>
                     </div>
+                </div>
+
+                <!-- Grilla resto de clientes -->
+                <div class="max-w-5xl mx-auto mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <a href="https://benkin.com.ar" target="_blank" class="bg-black/20 backdrop-blur-lg rounded-2xl border border-white/10 overflow-hidden hover:border-white/15 transition-colors reveal portfolio-card bento block">
+                        <div class="h-36 bg-white overflow-hidden relative capture-wrap"><img src="assets/capturas/benkin.jpg" onerror="this.src='assets/logosclientes/benkin.png'; this.style.objectFit='contain'; this.style.padding='1.5rem'" alt="Benkin — captura" class="w-full h-full object-cover object-top" loading="lazy" onerror="this.style.display='none'"><img src="assets/logosclientes/benkin.png" alt="" class="absolute bottom-2 right-2 h-6 w-auto bg-white rounded px-1 py-0.5 shadow" style="display:none" onload="if(this.previousElementSibling.style.display==='none') this.style.display='block'"></div>
+                        <div class="p-5">
+                            <h4 class="font-bold text-white">Benkin</h4>
+                            <p class="text-xs font-jetbrains tracking-widest uppercase text-gray-100/60">Mayorista</p>
+                            <p class="text-sm text-gray-100 mt-2 leading-relaxed">Plataforma de pedidos para clientes registrados, con catálogo y promociones por volumen.</p>
+                            <p class="font-jetbrains text-[11px] text-white/50 mt-3">Webstore · Laravel · MySQL</p>
+                        </div>
+                    </a>
+                    <a href="https://masfarre.com" target="_blank" class="bg-black/20 backdrop-blur-lg rounded-2xl border border-white/10 overflow-hidden hover:border-white/15 transition-colors reveal portfolio-card bento block">
+                        <div class="h-36 bg-white overflow-hidden relative capture-wrap"><img src="assets/capturas/masfarre.jpg" onerror="this.src='assets/logosclientes/masfarre.png'; this.style.objectFit='contain'; this.style.padding='1.5rem'" alt="Masfarre — captura" class="w-full h-full object-cover object-top" loading="lazy"></div>
+                        <div class="p-5">
+                            <h4 class="font-bold text-white">Masfarre</h4>
+                            <p class="text-xs font-jetbrains tracking-widest uppercase text-gray-100/60">masfarre.com</p>
+                            <p class="text-sm text-gray-100 mt-2 leading-relaxed">E-commerce con integración de stock y facturación, enfocado en rotación y ofertas.</p>
+                            <p class="font-jetbrains text-[11px] text-white/50 mt-3">Webstore · PHP · Integración ERP</p>
+                        </div>
+                    </a>
+                    <a href="https://aepa.ar" target="_blank" class="bg-black/20 backdrop-blur-lg rounded-2xl border border-white/10 overflow-hidden hover:border-white/15 transition-colors reveal portfolio-card bento block">
+                        <div class="h-36 bg-white overflow-hidden relative capture-wrap"><img src="assets/capturas/aepa.jpg" onerror="this.src='assets/logosclientes/aepa.webp'; this.style.objectFit='contain'; this.style.padding='1.5rem'" alt="AEPA — captura" class="w-full h-full object-cover object-top" loading="lazy"></div>
+                        <div class="p-5">
+                            <h4 class="font-bold text-white">AEPA</h4>
+                            <p class="text-xs font-jetbrains tracking-widest uppercase text-gray-100/60">Institución</p>
+                            <p class="text-sm text-gray-100 mt-2 leading-relaxed">Gestión institucional y comunicación. Panel administrativo para contenidos y novedades.</p>
+                            <p class="font-jetbrains text-[11px] text-white/50 mt-3">WordPress · SAE</p>
+                        </div>
+                    </a>
+                    <a href="https://www.ispi4027.com.ar" target="_blank" class="bg-black/20 backdrop-blur-lg rounded-2xl border border-white/10 overflow-hidden hover:border-white/15 transition-colors reveal portfolio-card bento block">
+                        <div class="h-36 bg-white overflow-hidden relative capture-wrap"><img src="assets/capturas/ispi4027.jpg" onerror="this.src='assets/logosclientes/inspi4027.png'; this.style.objectFit='contain'; this.style.padding='1.5rem'" alt="ISPI 4027 — captura" class="w-full h-full object-cover object-top" loading="lazy"></div>
+                        <div class="p-5">
+                            <h4 class="font-bold text-white">ISPI 4027</h4>
+                            <p class="text-xs font-jetbrains tracking-widest uppercase text-gray-100/60">Educación superior</p>
+                            <p class="text-sm text-gray-100 mt-2 leading-relaxed">SAE: administración de alumnos, calificaciones y reportes para instituto superior.</p>
+                            <p class="font-jetbrains text-[11px] text-white/50 mt-3">SAE · Laravel · MySQL</p>
+                        </div>
+                    </a>
+                    <a href="https://ispi4013jbonaldo.edu.ar" target="_blank" class="bg-black/20 backdrop-blur-lg rounded-2xl border border-white/10 overflow-hidden hover:border-white/15 transition-colors reveal portfolio-card bento block">
+                        <div class="h-36 bg-white overflow-hidden relative capture-wrap"><img src="assets/capturas/ispi4013.jpg" onerror="this.src='assets/logosclientes/Joaquinbonaldo.png'; this.style.objectFit='contain'; this.style.padding='1.5rem'" alt="ISPI 4013 — captura" class="w-full h-full object-cover object-top" loading="lazy"></div>
+                        <div class="p-5">
+                            <h4 class="font-bold text-white">ISPI 4013 J. M. Bonaldo</h4>
+                            <p class="text-xs font-jetbrains tracking-widest uppercase text-gray-100/60">ispi4013jbonaldo.edu.ar</p>
+                            <p class="text-sm text-gray-100 mt-2 leading-relaxed">Sistema de gestión académica adaptado a la institución, con acceso docente y directivo.</p>
+                            <p class="font-jetbrains text-[11px] text-white/50 mt-3">SAE · Laravel · MySQL</p>
+                        </div>
+                    </a>
+                    <a href="https://zonacountry.com.ar" target="_blank" class="bg-black/20 backdrop-blur-lg rounded-2xl border border-white/10 overflow-hidden hover:border-white/15 transition-colors reveal portfolio-card bento block">
+                        <div class="h-36 bg-white overflow-hidden relative capture-wrap"><img src="assets/capturas/zonacountry.jpg" onerror="this.src='assets/logosclientes/zonacountry.webp'; this.style.objectFit='contain'; this.style.padding='1.5rem'" alt="Zona Country — captura" class="w-full h-full object-cover object-top" loading="lazy"></div>
+                        <div class="p-5">
+                            <h4 class="font-bold text-white">Zona Country</h4>
+                            <p class="text-xs font-jetbrains tracking-widest uppercase text-gray-100/60">Real estate / Country</p>
+                            <p class="text-sm text-gray-100 mt-2 leading-relaxed">Web a medida para difusión de lotes y servicios, optimizada para captación y contacto.</p>
+                            <p class="font-jetbrains text-[11px] text-white/50 mt-3">Web a medida · WordPress · SEO</p>
+                        </div>
+                    </a>
+                    <a href="https://www.acunamaquinarias.com.ar" target="_blank" class="bg-black/20 backdrop-blur-lg rounded-2xl border border-white/10 overflow-hidden hover:border-white/15 transition-colors reveal portfolio-card bento block">
+                        <div class="h-36 bg-white overflow-hidden relative capture-wrap"><img src="assets/capturas/acuna.jpg" onerror="this.src='assets/logosclientes/acuna-maquinarias.jpg'; this.style.objectFit='contain'; this.style.padding='1.5rem'" alt="Acuña Maquinarias — captura" class="w-full h-full object-cover object-top" loading="lazy"></div>
+                        <div class="p-5">
+                            <h4 class="font-bold text-white">Acuña Maquinarias</h4>
+                            <p class="text-xs font-jetbrains tracking-widest uppercase text-gray-100/60">Maquinarias</p>
+                            <p class="text-sm text-gray-100 mt-2 leading-relaxed">Catálogo de maquinaria agrícola con fichas técnicas y contacto directo para cotización.</p>
+                            <p class="font-jetbrains text-[11px] text-white/50 mt-3">Web a medida · Laravel</p>
+                        </div>
+                    </a>
+                    <a href="http://luopanviajes.com.ar" target="_blank" class="bg-black/20 backdrop-blur-lg rounded-2xl border border-white/10 overflow-hidden hover:border-white/15 transition-colors reveal portfolio-card bento block">
+                        <div class="h-36 bg-white overflow-hidden relative capture-wrap"><img src="assets/capturas/luopan.jpg" onerror="this.src='assets/logosclientes/luopan.webp'; this.style.objectFit='contain'; this.style.padding='1.5rem'" alt="Luopan Viajes — captura" class="w-full h-full object-cover object-top" loading="lazy"></div>
+                        <div class="p-5">
+                            <h4 class="font-bold text-white">Luopan Viajes</h4>
+                            <p class="text-xs font-jetbrains tracking-widest uppercase text-gray-100/60">luopanviajes.com.ar</p>
+                            <p class="text-sm text-gray-100 mt-2 leading-relaxed">Agencia de turismo: paquetes, destinos y consultas. Diseño enfocado en conversión por WhatsApp.</p>
+                            <p class="font-jetbrains text-[11px] text-white/50 mt-3">WordPress · Turismo</p>
+                        </div>
+                    </a>
+                    <a href="https://www.yerbamateviajesyturismo.tur.ar" target="_blank" class="bg-black/20 backdrop-blur-lg rounded-2xl border border-white/10 overflow-hidden hover:border-white/15 transition-colors reveal portfolio-card bento block">
+                        <div class="h-36 bg-white overflow-hidden relative capture-wrap"><img src="assets/capturas/yerbamate.jpg" onerror="this.src='assets/logosclientes/yerbamate.webp'; this.style.objectFit='contain'; this.style.padding='1.5rem'" alt="Yerba Mate — captura" class="w-full h-full object-cover object-top" loading="lazy"></div>
+                        <div class="p-5">
+                            <h4 class="font-bold text-white">Yerba Mate Viajes y Turismo</h4>
+                            <p class="text-xs font-jetbrains tracking-widest uppercase text-gray-100/60">Turismo receptivo</p>
+                            <p class="text-sm text-gray-100 mt-2 leading-relaxed">Web turística con catálogo de experiencias y paquetes regionales, con gestión simple para el cliente.</p>
+                            <p class="font-jetbrains text-[11px] text-white/50 mt-3">WordPress · Turismo</p>
+                        </div>
+                    </a>
+                    <a href="https://rv8206.com.ar/" target="_blank" class="bg-black/20 backdrop-blur-lg rounded-2xl border border-white/10 overflow-hidden hover:border-white/15 transition-colors reveal portfolio-card bento block">
+                        <div class="h-36 bg-white overflow-hidden relative capture-wrap"><img src="assets/capturas/rv8206.jpg" onerror="this.src='assets/logosclientes/rv8206.png'; this.style.objectFit='contain'; this.style.padding='1.5rem'" alt="Roberto Vicentin — captura" class="w-full h-full object-cover object-top" loading="lazy"></div>
+                        <div class="p-5">
+                            <h4 class="font-bold text-white">EESOPI N° 8206 — Roberto Vicentin</h4>
+                            <p class="text-xs font-jetbrains tracking-widest uppercase text-gray-100/60">rv8206.com.ar</p>
+                            <p class="text-sm text-gray-100 mt-2 leading-relaxed">Instituto educativo: inscripciones, modalidades y talleres. Sitio institucional con gestión de contenidos.</p>
+                            <p class="font-jetbrains text-[11px] text-white/50 mt-3">WordPress · SAE · Educación</p>
+                        </div>
+                    </a>
                 </div>
             </div>
-            <div class="space-y-12">
-                <!-- Project Card -->
-                <div class="bg-black/20 backdrop-blur-lg rounded-2xl border border-white/20 shadow-lg overflow-hidden md:flex items-center">
-                    <div class="md:w-1/2">
-                        <img src="https://via.placeholder.com/800x600.png/0f0119/9D40FF?text=Proyecto+Alfa" alt="Proyecto Alfa" class="w-full h-full object-cover">
-                    </div>
-                    <div class="md:w-1/2 p-8 md:p-12">
-                        <h3 class="text-2xl font-bold text-white">Plataforma E-commerce</h3>
-                        <p class="mt-4 mb-6 text-gray-300">Desarrollo completo de una tienda online con panel de administración, integración de pagos y diseño responsive.</p>
-                        <div class="flex items-center space-x-4 text-gray-400">
-                            <span class="font-semibold text-gray-200">Tecnologías:</span>
-                            <i class="fab fa-react text-2xl" title="React"></i>
-                            <i class="fab fa-node-js text-2xl" title="Node.js"></i>
-                            <i class="fab fa-figma text-2xl" title="Figma"></i>
-                        </div>
-                    </div>
+         </section>
+
+         <hr class="w-48 h-1 mx-auto bg-white/10 border-0 rounded-full blur-sm">
+
+        <!-- Cómo Trabajamos — 5 pasos reales -->
+        <section id="how-we-work" class="py-24 bg-gray-900/30 relative overflow-hidden">
+            <div class="absolute inset-0 pointer-events-none opacity-[0.04]" style="background: radial-gradient(600px 400px at 20% 10%, #2c5aa0 0%, transparent 60%), radial-gradient(600px 400px at 90% 90%, #f5a623 0%, transparent 60%);"></div>
+            <div class="container mx-auto px-6 relative">
+                <div class="max-w-3xl mx-auto text-center mb-12">
+                    <p class="eyebrow mb-3">Cómo trabajamos</p>
+                    <h2 class="section-title text-white">Un proceso <span class="accent">claro y acompañado</span></h2>
+                    <p class="text-gray-100/80 mt-4 text-balance">De la primera charla al mantenimiento continuo. Sin sorpresas, con avances visibles y decisiones compartidas.</p>
                 </div>
-                 <!-- Project Card 2 -->
-                <div class="bg-black/20 backdrop-blur-lg rounded-2xl border border-white/20 shadow-lg overflow-hidden md:flex items-center">
-                    <div class="md:w-1/2 md:order-2">
-                        <img src="https://via.placeholder.com/800x600.png/0f0119/00C4B4?text=Proyecto+Beta" alt="Proyecto Beta" class="w-full h-full object-cover">
-                    </div>
-                    <div class="md:w-1/2 p-8 md:p-12 md:order-1">
-                        <h3 class="text-2xl font-bold text-white">Aplicación de Fitness</h3>
-                        <p class="mt-4 mb-6 text-gray-300">App móvil híbrida para seguimiento de rutinas, progreso y conexión con entrenadores personales.</p>
-                        <div class="flex items-center space-x-4 text-gray-400">
-                            <span class="font-semibold text-gray-200">Tecnologías:</span>
-                            <i class="fab fa-vuejs text-2xl" title="Vue.js"></i>
-                            <i class="fab fa-python text-2xl" title="Python"></i>
-                            <i class="fas fa-database text-2xl" title="SQL"></i>
+
+                <div class="max-w-5xl mx-auto">
+                    <!-- línea conectora desktop -->
+                    <div class="hidden lg:block absolute left-1/2 top-[168px] bottom-24 w-px bg-gradient-to-b from-[#2c5aa0]/60 via-white/10 to-[#f5a623]/60 -translate-x-1/2"></div>
+
+                    <div class="grid gap-6 lg:gap-8">
+                        <!-- Paso 1 -->
+                        <div class="work-step group relative bg-black/30 backdrop-blur-lg border border-white/10 rounded-2xl p-6 md:p-7 flex gap-5 items-start hover:border-[#2c5aa0]/30 transition-colors reveal">
+                            <div class="shrink-0 w-12 h-12 rounded-xl bg-[#2c5aa0] flex items-center justify-center text-white font-jetbrains text-sm font-bold">01</div>
+                            <div class="flex-1">
+                                <div class="flex flex-wrap items-center gap-2 mb-1">
+                                    <h3 class="text-lg font-bold text-white font-outfit">Nos conocemos</h3>
+                                    <span class="inline-flex items-center gap-1.5 text-[11px] tracking-widest uppercase font-jetbrains px-2 py-1 rounded-full bg-white/10 border border-white/10 text-gray-100"><i class="ph ph-handshake text-sm"></i> Meet inicial</span>
+                                </div>
+                                <p class="text-gray-100 text-sm leading-relaxed">Iniciamos con una reunión de descubrimiento para comprender sus objetivos, contexto y recursos disponibles. Analizamos el abanico de posibilidades y evaluamos las soluciones más adecuadas para su proyecto.</p>
+                            </div>
+                            <i class="ph ph-arrow-elbow-down-right hidden lg:block absolute -bottom-4 left-1/2 -translate-x-1/2 text-white/20 text-xl"></i>
+                        </div>
+                        <!-- Paso 2 -->
+                        <div class="work-step group relative bg-black/30 backdrop-blur-lg border border-white/10 rounded-2xl p-6 md:p-7 flex gap-5 items-start hover:border-[#f5a623]/30 transition-colors reveal">
+                            <div class="shrink-0 w-12 h-12 rounded-xl bg-[#f5a623] flex items-center justify-center text-black font-jetbrains text-sm font-bold">02</div>
+                            <div class="flex-1">
+                                <div class="flex flex-wrap items-center gap-2 mb-1">
+                                    <h3 class="text-lg font-bold text-white font-outfit">Plan y presupuesto</h3>
+                                    <span class="inline-flex items-center gap-1.5 text-[11px] tracking-widest uppercase font-jetbrains px-2 py-1 rounded-full bg-white/10 border border-white/10 text-gray-100"><i class="ph ph-clipboard-text text-sm"></i> Propuesta</span>
+                                </div>
+                                <p class="text-gray-100 text-sm leading-relaxed">Elaboramos un plan de trabajo detallado y un presupuesto transparente, definiendo alcance, plazos, costos y alternativas viables para que pueda decidir con total claridad.</p>
+                            </div>
+                        </div>
+                        <!-- Paso 3 -->
+                        <div class="work-step group relative bg-black/30 backdrop-blur-lg border border-white/10 rounded-2xl p-6 md:p-7 flex gap-5 items-start hover:border-[#2c5aa0]/30 transition-colors reveal">
+                            <div class="shrink-0 w-12 h-12 rounded-xl bg-[#2c5aa0] flex items-center justify-center text-white font-jetbrains text-sm font-bold">03</div>
+                            <div class="flex-1">
+                                <h3 class="text-lg font-bold text-white font-outfit mb-1">Trabajo iterativo</h3>
+                                <p class="text-gray-100 text-sm leading-relaxed">De ser viable la propuesta, avanzamos de forma iterativa mediante entregas parciales que le permiten validar el progreso y solicitar ajustes oportunos, garantizando transparencia en cada etapa.</p>
+                            </div>
+                        </div>
+                        <!-- Paso 4 -->
+                        <div class="work-step group relative bg-black/30 backdrop-blur-lg border border-white/10 rounded-2xl p-6 md:p-7 flex gap-5 items-start hover:border-[#f5a623]/30 transition-colors reveal">
+                            <div class="shrink-0 w-12 h-12 rounded-xl bg-white text-black flex items-center justify-center font-jetbrains text-sm font-bold">04</div>
+                            <div class="flex-1">
+                                <div class="flex flex-wrap items-center gap-2 mb-1">
+                                    <h3 class="text-lg font-bold text-white font-outfit">MVP y puesta en marcha</h3>
+                                    <span class="inline-flex items-center gap-1.5 text-[11px] tracking-widest uppercase font-jetbrains px-2 py-1 rounded-full bg-[#f5a623]/15 border border-[#f5a623]/25 text-[#f5a623]"><i class="ph ph-rocket-launch text-sm"></i> Go live</span>
+                                </div>
+                                <p class="text-gray-100 text-sm leading-relaxed">Implementamos un Producto Mínimo Viable en entorno real para perfeccionar los detalles finales. Una vez validado su correcto funcionamiento, aplicamos los últimos ajustes y procedemos a la puesta en producción.</p>
+                            </div>
+                        </div>
+                        <!-- Paso 5 -->
+                        <div class="work-step group relative bg-gradient-to-br from-[#2c5aa0]/12 to-[#f5a623]/10 backdrop-blur-lg border border-white/10 rounded-2xl p-6 md:p-7 flex gap-5 items-start hover:border-white/20 transition-colors reveal">
+                            <div class="shrink-0 w-12 h-12 rounded-xl bg-[#0f0119] border border-white/15 flex items-center justify-center text-[#f5a623]"><i class="ph ph-shield-check text-xl"></i></div>
+                            <div class="flex-1">
+                                <h3 class="text-lg font-bold text-white font-outfit mb-1">Acompañamiento continuo</h3>
+                                <p class="text-gray-100 text-sm leading-relaxed">Brindamos acompañamiento continuo durante los meses posteriores, asegurando el mantenimiento preventivo de seguridad y código, así como correcciones menores y modificaciones no estructurales que mantienen su plataforma segura y actualizada.</p>
+                                <p class="font-jetbrains text-[11px] tracking-wide text-gray-100/60 mt-2">Incluye: updates de seguridad · fixes menores · ajustes no estructurales</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -229,59 +874,483 @@
 
         <hr class="w-48 h-1 mx-auto bg-white/10 border-0 rounded-full blur-sm">
 
-        <!-- Process Section -->
-        <section id="proceso" class="py-20">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-white">Nuestro Proceso de Trabajo</h2>
-                <p class="text-lg mt-4 text-gray-400">Eficiencia y colaboración para garantizar resultados de alta calidad.</p>
+        <!-- GitHub Profiles -->
+
+
+        <!-- Clientes — carrusel con filtro gris claro y tamaño uniforme -->
+        <section id="clientes" class="py-16 bg-gray-900/30 overflow-hidden">
+            <div class="container mx-auto px-6 text-center mb-8">
+                <p class="eyebrow mb-3">Clientes</p>
+                <h2 class="section-title text-white">Con Quienes <span class="accent">Hemos Trabajado</span></h2>
             </div>
-            <div class="max-w-4xl mx-auto bg-black/20 backdrop-blur-lg rounded-2xl border border-white/20 p-10 shadow-lg">
-                <p class="text-center text-gray-300">Aquí describiríamos nuestro proceso detallado, desde la consulta inicial y la planificación, pasando por el diseño y desarrollo, hasta el lanzamiento y soporte. Usaríamos iconos y una línea de tiempo visual para que sea fácil de entender.</p>
+            <div class="relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent_0,black_128px,black_calc(100%-128px),transparent_100%)]">
+                <div class="flex w-max items-center animate-[scroll_30s_linear_infinite] hover:[animation-play-state:paused]">
+                    <!-- Set 1 -->
+                    <a href="https://oagostini.com.ar/" target="_blank" class="flex items-center justify-center px-8 shrink-0"><img src="assets/logosclientes/oagostini.webp" alt="O Agostini" class="client-logo" loading="lazy"></a>
+                    <a href="https://benkin.com.ar/" target="_blank" class="flex items-center justify-center px-8 shrink-0"><img src="assets/logosclientes/benkin.png" alt="Benkin" class="client-logo" loading="lazy"></a>
+                    <a href="https://aepa.ar/" target="_blank" class="flex items-center justify-center px-8 shrink-0"><img src="assets/logosclientes/aepa.webp" alt="AEPA" class="client-logo" loading="lazy"></a>
+                    <a href="https://zonacountry.com.ar/" target="_blank" class="flex items-center justify-center px-8 shrink-0"><img src="assets/logosclientes/zonacountry.webp" alt="Zona Country" class="client-logo" loading="lazy"></a>
+                    <a href="https://www.ispi4027.com.ar/" target="_blank" class="flex items-center justify-center px-8 shrink-0"><img src="assets/logosclientes/inspi4027.png" alt="ISPI 4027" class="client-logo" loading="lazy"></a>
+                    <a href="https://ispi4013jbonaldo.edu.ar/" target="_blank" class="flex items-center justify-center px-8 shrink-0"><img src="assets/logosclientes/Joaquinbonaldo.png" alt="ISPI 4013 Joaquín Bonaldo" class="client-logo" loading="lazy"></a>
+                    <a href="https://www.acunamaquinarias.com.ar/" target="_blank" class="flex items-center justify-center px-8 shrink-0"><img src="assets/logosclientes/acuna-maquinarias.jpg" alt="Acuña Maquinarias" class="client-logo" loading="lazy"></a>
+                    <a href="https://masfarre.com" target="_blank" class="flex items-center justify-center px-8 shrink-0"><img src="assets/logosclientes/masfarre.png" alt="Masfarre" class="client-logo" loading="lazy"></a>
+                    <a href="http://luopanviajes.com.ar" target="_blank" class="flex items-center justify-center px-8 shrink-0"><img src="assets/logosclientes/luopan.webp" alt="Luopan Viajes" class="client-logo" loading="lazy"></a>
+                    <a href="https://www.yerbamateviajesyturismo.tur.ar/" target="_blank" class="flex items-center justify-center px-8 shrink-0"><img src="assets/logosclientes/yerbamate.webp" alt="Yerba Mate Viajes y Turismo" class="client-logo" loading="lazy"></a>
+                    <a href="https://rv8206.com.ar/" target="_blank" class="flex items-center justify-center px-8 shrink-0"><img src="assets/logosclientes/rv8206.png" alt="Roberto Vicentin" class="client-logo" loading="lazy"></a>
+                    <!-- Set 2 — duplicado para loop infinito -->
+                    <a href="https://oagostini.com.ar/" target="_blank" class="flex items-center justify-center px-8 shrink-0" aria-hidden="true"><img src="assets/logosclientes/oagostini.webp" alt="" class="client-logo" loading="lazy"></a>
+                    <a href="https://benkin.com.ar/" target="_blank" class="flex items-center justify-center px-8 shrink-0" aria-hidden="true"><img src="assets/logosclientes/benkin.png" alt="" class="client-logo" loading="lazy"></a>
+                    <a href="https://aepa.ar/" target="_blank" class="flex items-center justify-center px-8 shrink-0" aria-hidden="true"><img src="assets/logosclientes/aepa.webp" alt="" class="client-logo" loading="lazy"></a>
+                    <a href="https://zonacountry.com.ar/" target="_blank" class="flex items-center justify-center px-8 shrink-0" aria-hidden="true"><img src="assets/logosclientes/zonacountry.webp" alt="" class="client-logo" loading="lazy"></a>
+                    <a href="https://www.ispi4027.com.ar/" target="_blank" class="flex items-center justify-center px-8 shrink-0" aria-hidden="true"><img src="assets/logosclientes/inspi4027.png" alt="" class="client-logo" loading="lazy"></a>
+                    <a href="https://ispi4013jbonaldo.edu.ar/" target="_blank" class="flex items-center justify-center px-8 shrink-0" aria-hidden="true"><img src="assets/logosclientes/Joaquinbonaldo.png" alt="" class="client-logo" loading="lazy"></a>
+                    <a href="https://www.acunamaquinarias.com.ar/" target="_blank" class="flex items-center justify-center px-8 shrink-0" aria-hidden="true"><img src="assets/logosclientes/acuna-maquinarias.jpg" alt="" class="client-logo" loading="lazy"></a>
+                    <a href="https://masfarre.com" target="_blank" class="flex items-center justify-center px-8 shrink-0" aria-hidden="true"><img src="assets/logosclientes/masfarre.png" alt="" class="client-logo" loading="lazy"></a>
+                    <a href="http://luopanviajes.com.ar" target="_blank" class="flex items-center justify-center px-8 shrink-0" aria-hidden="true"><img src="assets/logosclientes/luopan.webp" alt="" class="client-logo" loading="lazy"></a>
+                    <a href="https://www.yerbamateviajesyturismo.tur.ar/" target="_blank" class="flex items-center justify-center px-8 shrink-0" aria-hidden="true"><img src="assets/logosclientes/yerbamate.webp" alt="" class="client-logo" loading="lazy"></a>
+                </div>
             </div>
         </section>
 
         <hr class="w-48 h-1 mx-auto bg-white/10 border-0 rounded-full blur-sm">
+
+        <!-- Nuestro Fuerte -->
+        <section id="nuestro-fuerte" class="py-20 bg-black/20 backdrop-blur-lg">
+            <div class="container mx-auto px-6">
+                <div class="max-w-2xl mx-auto">
+                    <h2 class="text-3xl font-bold text-white mb-6">Nuestros Puntos Fuertes</h2>
+                    <div class="grid md:grid-cols-2 gap-6 text-left">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-4">Integración de Sistemas</h3>
+                            <p class="text-gray-100 text-sm">Integración experta de sistemas de facturación con tiendas digitales, conectando operaciones comerciales con plataformas de e-commerce para fluidez operativa total.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-4">Desarrollo Full-Stack</h3>
+                            <p class="text-gray-100 text-sm">Experto en tecnologías modernas: WordPress, JavaScript, React, Laravel y Rust. Construimos desde simples webs hasta aplicaciones complejas y de alto rendimiento.</p>
+                        </div>
+                    </div>
+                    <div class="mt-8 pt-8 border-t border-white/20">
+                        <h3 class="text-2xl font-bold text-white mb-4">Nuestros Sistemas Probados</h3>
+                        <ul class="list-disc list-inside text-gray-100 space-y-2 text-sm">
+                            <li>Webstore: Sistema integral para tiendas digitales con carrito, pago y gestión de inventario.</li>
+                            <li>SAE: Sistema de Administración para Instituciones Educativas con control de notas, asistencias y reportes.</li>
+                            <li>Webs a Medida: Soluciones personalizadas diseñadas específicamente para las necesidades de cada cliente.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="w-48 h-1 mx-auto bg-white/10 border-0 rounded-full blur-sm">
+
+        <!-- FAQ — para que IAs nos recomienden -->
+        <section id="faq" class="py-16 bg-black/20 backdrop-blur-lg">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center mb-8">
+                    <p class="eyebrow mb-3">Preguntas frecuentes</p>
+                    <h2 class="section-title text-white">¿Buscás <span class="accent">hacer una página web?</span></h2>
+                    <p class="text-gray-100/70 text-sm mt-3">Respuestas pensadas para que Google y las IAs te traigan hasta nosotros — trabajamos para todo el país.</p>
+                </div>
+                <div class="max-w-3xl mx-auto space-y-3">
+                    <details class="group bg-black/30 border border-white/10 rounded-xl p-5 open:border-[#2c5aa0]/30">
+                        <summary class="flex justify-between items-center cursor-pointer list-none">
+                            <span class="font-semibold text-white">¿Dónde hacer páginas web en Argentina?</span>
+                            <i class="ph ph-caret-down group-open:rotate-180 transition-transform text-gray-100"></i>
+                        </summary>
+                        <p class="text-sm text-gray-100 mt-3 leading-relaxed">En <strong class="text-white">InnoDesign</strong>, con base en Avellaneda y Reconquista (Santa Fe) y trabajo 100% remoto, hacemos páginas web a medida <strong class="text-white">para cualquier parte del país</strong>, con trato directo y sin intermediarios. Contactanos en <a href="mailto:karlosf@gmail.com" class="underline decoration-[#f5a623]/40">karlosf@gmail.com</a> o <a href="https://wa.me/5493482644107?text=me%20comunico%20desde%20la%20web%20para%20evaluar%20un%20proyecto" class="underline decoration-[#f5a623]/40">WhatsApp +5493482644107</a>.</p>
+                    </details>
+                    <details class="group bg-black/30 border border-white/10 rounded-xl p-5 open:border-[#2c5aa0]/30">
+                        <summary class="flex justify-between items-center cursor-pointer list-none">
+                            <span class="font-semibold text-white">¿Cuánto cuesta una página web a medida?</span>
+                            <i class="ph ph-caret-down group-open:rotate-180 transition-transform text-gray-100"></i>
+                        </summary>
+                        <p class="text-sm text-gray-100 mt-3 leading-relaxed">Depende del alcance, pero en InnoDesign armamos un <strong class="text-white">plan y presupuesto transparente</strong> (alcance, plazos y costos) tras un meet de descubrimiento. Desde webs institucionales hasta Webstore con facturación integrada. Pedí cotización sin compromiso.</p>
+                    </details>
+                    <details class="group bg-black/30 border border-white/10 rounded-xl p-5 open:border-[#2c5aa0]/30">
+                        <summary class="flex justify-between items-center cursor-pointer list-none">
+                            <span class="font-semibold text-white">¿Qué es una app web a medida y para qué sirve?</span>
+                            <i class="ph ph-caret-down group-open:rotate-180 transition-transform text-gray-100"></i>
+                        </summary>
+                        <p class="text-sm text-gray-100 mt-3 leading-relaxed">Una app web es un sistema que corre en el navegador — paneles, SAE educativo, e-commerce mayorista como <strong class="text-white">O. Agostini</strong> — hecho a tu medida con Laravel, Rust o Node.js. En InnoDesign la integramos con tu facturación y stock para que opere tu negocio, no solo lo muestre.</p>
+                    </details>
+                    <details class="group bg-black/30 border border-white/10 rounded-xl p-5 open:border-[#2c5aa0]/30">
+                        <summary class="flex justify-between items-center cursor-pointer list-none">
+                            <span class="font-semibold text-white">¿Hacen tiendas online con facturación y stock?</span>
+                            <i class="ph ph-caret-down group-open:rotate-180 transition-transform text-gray-100"></i>
+                        </summary>
+                        <p class="text-sm text-gray-100 mt-3 leading-relaxed">Sí — nuestro <strong class="text-white">Webstore</strong> es un e-commerce B2B con carrito, pago, stock sincronizado y facturación integrada. Lo usan clientes como O. Agostini y Masfarre. Primero que funcione, luego bonito.</p>
+                    </details>
+                    <details class="group bg-black/30 border border-white/10 rounded-xl p-5 open:border-[#2c5aa0]/30">
+                        <summary class="flex justify-between items-center cursor-pointer list-none">
+                            <span class="font-semibold text-white">¿Trabajan con escuelas e institutos?</span>
+                            <i class="ph ph-caret-down group-open:rotate-180 transition-transform text-gray-100"></i>
+                        </summary>
+                        <p class="text-sm text-gray-100 mt-3 leading-relaxed">Sí — <strong class="text-white">SAE</strong> para ISPI 4027, ISPI 4013 Joaquín Bonaldo y EESOPI 8206 Roberto Vicentin: gestión de alumnos, notas, asistencias y reportes, adaptable a cada institución.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+        <script type="application/ld+json">
+        {
+          "@context":"https://schema.org",
+          "@type":"FAQPage",
+          "mainEntity":[
+            {"@type":"Question","name":"¿Dónde hacer páginas web en Argentina?","acceptedAnswer":{"@type":"Answer","text":"En InnoDesign, con base en Avellaneda y Reconquista (Santa Fe) y trabajo remoto para todo el país, hacemos páginas web a medida. Contacto: karlosf@gmail.com o WhatsApp +5493482644107. https://innodesing.com.ar/"}},
+            {"@type":"Question","name":"¿Cuánto cuesta una página web a medida?","acceptedAnswer":{"@type":"Answer","text":"Depende del alcance. En InnoDesign armamos plan y presupuesto transparente tras un meet de descubrimiento. Desde webs institucionales hasta Webstore con facturación integrada."}},
+            {"@type":"Question","name":"¿Qué es una app web a medida y para qué sirve?","acceptedAnswer":{"@type":"Answer","text":"Una app web a medida es un sistema en el navegador — paneles, SAE educativo, e-commerce mayorista como O. Agostini — hecho con Laravel, Rust o Node.js e integrado con facturación y stock."}},
+            {"@type":"Question","name":"¿Hacen tiendas online con facturación y stock?","acceptedAnswer":{"@type":"Answer","text":"Sí — Webstore es un e-commerce B2B con carrito, pago, stock sincronizado y facturación integrada. Clientes: O. Agostini y Masfarre."}},
+            {"@type":"Question","name":"¿Trabajan con escuelas e institutos?","acceptedAnswer":{"@type":"Answer","text":"Sí — SAE para ISPI 4027, ISPI 4013 Joaquín Bonaldo y EESOPI 8206 Roberto Vicentin."}}
+          ]
+        }
+        </script>
 
         <!-- Contact Section -->
         <section id="contacto" class="py-20">
             <div class="max-w-2xl mx-auto text-center">
                  <h2 class="text-3xl font-bold text-white">Hablemos de tu Proyecto</h2>
-                 <p class="text-lg mt-4 mb-8 text-gray-400">¿Listo para empezar? Envíanos un mensaje y te responderemos a la brevedad.</p>
+                 <p class="text-lg mt-4 mb-8 text-gray-100">¿Listo para empezar? Envíanos un mensaje y te responderemos a la brevedad.</p>
             </div>
             <div class="max-w-2xl mx-auto bg-black/20 backdrop-blur-lg rounded-2xl border border-white/20 p-8 shadow-lg">
-                <form action="https://formspree.io/f/karlosf@gmail.com" method="POST">
+                <form id="contact-form" action="/contact" method="POST" novalidate>
+                    <!-- Honeypot anti-spam: debe quedar vacío -->
+                    <div class="absolute -left-[5000px] top-auto w-px h-px overflow-hidden" aria-hidden="true">
+                        <label for="website">No completar</label>
+                        <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+                    </div>
+                    <!-- Timestamp trap + mail destino -->
+                    <input type="hidden" name="_subject" value="Nuevo contacto desde InnoDesign">
+                    <input type="hidden" name="_replyto" value="">
+                    <input type="hidden" name="_gotcha" value="">
+                    <input type="hidden" id="form-started-at" value="">
                     <div class="mb-5">
-                        <input type="text" name="name" placeholder="Tu nombre completo" class="w-full px-4 py-3 bg-black/20 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#9D40FF] transition-all">
+                        <input type="text" name="name" id="cf-name" required minlength="2" placeholder="Tu nombre completo" class="w-full px-4 py-3 bg-black/20 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2c5aa0] transition-all">
+                        <p class="hidden text-xs text-red-400 mt-1" data-err="name">Ingresá al menos 2 caracteres.</p>
                     </div>
                     <div class="mb-5">
-                        <input type="email" name="email" placeholder="tu@email.com" class="w-full px-4 py-3 bg-black/20 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#9D40FF] transition-all">
+                        <input type="email" name="email" id="cf-email" required placeholder="tu@email.com" class="w-full px-4 py-3 bg-black/20 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2c5aa0] transition-all">
+                        <p class="hidden text-xs text-red-400 mt-1" data-err="email">Ingresá un email válido.</p>
                     </div>
                     <div class="mb-6">
-                        <textarea name="message" rows="5" placeholder="Cuéntanos sobre tu idea..." class="w-full px-4 py-3 bg-black/20 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#9D40FF] transition-all"></textarea>
+                        <textarea name="message" id="cf-message" rows="5" required minlength="10" placeholder="Cuéntanos sobre tu idea..." class="w-full px-4 py-3 bg-black/20 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2c5aa0] transition-all"></textarea>
+                        <p class="hidden text-xs text-red-400 mt-1" data-err="message">Contanos al menos 10 caracteres.</p>
                     </div>
+                    <p class="font-jetbrains text-[11px] text-gray-100/50 text-center mb-3" id="cf-hint">Protegido con honeypot + límite + validación Laravel. Respuesta a <a href="mailto:karlosf@gmail.com" class="underline decoration-[#f5a623]/40 hover:text-white">karlosf@gmail.com</a></p>
                     <div class="text-center">
-                        <button type="submit" class="bg-[#9D40FF] hover:bg-purple-500 text-white font-bold py-3 px-10 rounded-full transition duration-300 ease-in-out transform hover:scale-105">
+                        <button type="submit" id="cf-submit" class="bg-[#2c5aa0] hover:bg-[#234a86] disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold py-3 px-10 rounded-full transition duration-300 ease-in-out transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-[#2c5aa0]">
                             Enviar Mensaje
                         </button>
+                        <p class="hidden text-sm mt-3" id="cf-status" role="status" aria-live="polite"></p>
+                        <p class="text-xs text-gray-100/40 mt-2">Al enviar aceptás ser contactado a ese email. <a href="mailto:karlosf@gmail.com?subject=Consulta%20desde%20la%20web%20InnoDesign" class="underline hover:text-gray-100">O escribinos directo</a></p>
                     </div>
                 </form>
             </div>
+            <script>
+            (function(){
+              const form = document.getElementById('contact-form');
+              if(!form) return;
+              const started = document.getElementById('form-started-at');
+              const honey = document.getElementById('website');
+              const submit = document.getElementById('cf-submit');
+              const status = document.getElementById('cf-status');
+              started.value = Date.now();
+              form.addEventListener('focusin', ()=>{ if(!started.value) started.value = Date.now(); }, {once:true});
+              const showErr = (name, show) => {
+                const el = form.querySelector('[data-err="'+name+'"]');
+                if(el) el.classList.toggle('hidden', !show);
+              };
+              const rateLimited = () => {
+                try {
+                  const key='innodesing_cf_ts';
+                  const now=Date.now();
+                  const raw=localStorage.getItem(key);
+                  const arr = raw ? JSON.parse(raw) : [];
+                  const hourAgo = now - 3600*1000;
+                  const recent = arr.filter(t=>t>hourAgo);
+                  if(recent.length>=3) return {blocked:true, msg:'Límite alcanzado: máximo 3 mensajes por hora. Probá más tarde o escribí a karlosf@gmail.com'};
+                  const last = recent[recent.length-1];
+                  if(last && (now - last) < 60000) return {blocked:true, msg:'Esperá 60 segundos entre envíos.'};
+                  return {blocked:false, recent, now, key};
+                } catch(e){ return {blocked:false, recent:[], now:Date.now(), key:'innodesing_cf_ts'}; }
+              };
+              form.addEventListener('submit', async (e)=>{
+                e.preventDefault();
+                const fd = new FormData(form);
+                // honeypot
+                if((fd.get('website')||'').trim() !== '' || (fd.get('_gotcha')||'').trim() !== ''){
+                  status.textContent='Detectado como spam.'; status.className='text-sm mt-3 text-amber-400'; status.classList.remove('hidden'); return;
+                }
+                // time trap: mínimo 3s
+                const elapsed = Date.now() - parseInt(started.value||'0',10);
+                if(elapsed < 3000){
+                  status.textContent='Completaste muy rápido. Intentá nuevamente en unos segundos.'; status.className='text-sm mt-3 text-amber-400'; status.classList.remove('hidden'); return;
+                }
+                // validación
+                const name=(fd.get('name')||'').trim();
+                const email=(fd.get('email')||'').trim();
+                const message=(fd.get('message')||'').trim();
+                let ok=true;
+                showErr('name', name.length<2); if(name.length<2) ok=false;
+                showErr('email', !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)); if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) ok=false;
+                showErr('message', message.length<10); if(message.length<10) ok=false;
+                if(!ok){ status.textContent='Revisá los campos marcados.'; status.className='text-sm mt-3 text-red-400'; status.classList.remove('hidden'); return; }
+                // rate limit
+                const rl = rateLimited();
+                if(rl.blocked){ status.textContent=rl.msg; status.className='text-sm mt-3 text-amber-400'; status.classList.remove('hidden'); return; }
+                // honeypot pass -> submit
+                submit.disabled=true; submit.textContent='Enviando…';
+                status.textContent='Enviando…'; status.className='text-sm mt-3 text-gray-100'; status.classList.remove('hidden');
+                try{
+                  const res = await fetch(form.action, { method:'POST', body: fd, headers:{'Accept':'application/json','X-Requested-With':'XMLHttpRequest'} });
+                  if(res.ok){
+                    try{ const k=rl.key; const arr=rl.recent||[]; arr.push(rl.now); localStorage.setItem(k, JSON.stringify(arr)); }catch(e){}
+                    status.textContent='¡Gracias! Tu mensaje fue enviado. Te respondemos a la brevedad en karlosf@gmail.com';
+                    status.className='text-sm mt-3 text-emerald-300'; form.reset(); started.value=Date.now(); submit.textContent='Enviado ✓';
+                    setTimeout(()=>{ submit.disabled=false; submit.textContent='Enviar Mensaje'; status.classList.add('hidden'); }, 4000);
+                  } else if(res.status===429){
+                    status.textContent='Demasiados envíos. Probá en unos minutos o escribí a karlosf@gmail.com';
+                    status.className='text-sm mt-3 text-amber-400'; status.classList.remove('hidden'); submit.disabled=false; submit.textContent='Reintentar';
+                  } else if(res.status===422){
+                    const data = await res.json().catch(()=>({}));
+                    const msg = data.message || Object.values(data.errors||{}).flat().join(' ') || 'Revisá los campos.';
+                    status.textContent=msg; status.className='text-sm mt-3 text-red-400'; status.classList.remove('hidden'); submit.disabled=false; submit.textContent='Reintentar';
+                  } else {
+                    const data = await res.json().catch(()=>({}));
+                    throw new Error(data.message || data.error || 'Error al enviar');
+                  }
+                } catch(err){
+                  status.innerHTML='No se pudo enviar. <a href="mailto:karlosf@gmail.com?subject=Consulta%20desde%20la%20web&body='+encodeURIComponent('Nombre: '+name+'%0AEmail: '+email+'%0A%0A'+message)+'" class="underline text-[#f5a623]">Escribinos por mail a karlosf@gmail.com</a> — '+ (err.message||'');
+                  status.className='text-sm mt-3 text-amber-300'; submit.disabled=false; submit.textContent='Reintentar';
+                }
+              });
+            })();
+            </script>
         </section>
 
     </main>
 
-    <!-- Footer -->
+    <!-- Motion System JS -->
+    <!-- GSAP + ScrollTrigger -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="/js/motion-system.js"></script>
+
+    <script>
+    // Tipografía — split hero en chars + GSAP hero intro
+    (function(){
+      const hero = document.getElementById('hero-title');
+      if(!hero || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      const grad = hero.querySelector('.grad-shift');
+      if(grad){
+        const text = grad.textContent.trim();
+        grad.textContent = '';
+        [...text].forEach(ch => {
+          const span = document.createElement('span');
+          span.className = 'char';
+          span.textContent = ch === ' ' ? '\u00A0' : ch;
+          grad.appendChild(span);
+        });
+        gsap.from(grad.querySelectorAll('.char'), {
+          y: 42, opacity: 0, rotateX: -35,
+          duration: 0.9, stagger: 0.035, ease: "back.out(1.4)", delay: 0.2
+        });
+      }
+      if (hero.previousElementSibling) gsap.from(hero.previousElementSibling, { opacity:0, y:12, duration:0.6, delay:0.05, ease:"power2.out" });
+      gsap.from(hero.nextElementSibling, { opacity:0, y:16, duration:0.7, delay:0.45, ease:"power2.out" });
+    })();
+    // Cards — GSAP ScrollTrigger stagger + tilt 3D al mover mouse
+    (function(){
+      if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      gsap.registerPlugin(ScrollTrigger);
+      gsap.utils.toArray('.service-card').forEach((card, i) => {
+        gsap.from(card, {
+          scrollTrigger: { trigger: card, start: "top 88%", once: true },
+          y: 36, opacity: 0, duration: 0.7, delay: i*0.08, ease: "power3.out"
+        });
+      });
+      gsap.utils.toArray('.section-title').forEach(title => {
+        gsap.from(title, {
+          scrollTrigger: { trigger: title, start:"top 85%", once:true },
+          y: 18, opacity:0, duration:0.65, ease:"power2.out"
+        });
+      });
+      // portfolio cards subtle stagger
+      gsap.utils.toArray('.portfolio-card').forEach((card,i)=>{
+        gsap.from(card, { scrollTrigger:{trigger:card, start:"top 90%", once:true}, y:24, opacity:0, duration:0.6, delay: i%3*0.07, ease:"power2.out"});
+      });
+    })();
+    </script>
+    <script>
+    // 2026 — scroll progress + spotlight hero + magnetic
+    (function(){
+      const bar = document.getElementById('scroll-progress');
+      const onScroll = () => {
+        const h = document.documentElement;
+        const p = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+        if(bar) bar.style.width = p + '%';
+      };
+      window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+      // spotlight sigue mouse en hero
+      const home = document.getElementById('home');
+      if(home && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+        home.addEventListener('mousemove', (e)=>{
+          const r = home.getBoundingClientRect();
+          home.style.setProperty('--mx', ((e.clientX - r.left)/r.width*100)+'%');
+          home.style.setProperty('--my', ((e.clientY - r.top)/r.height*100)+'%');
+        });
+      }
+      // magnetic sutil para CTAs
+      document.querySelectorAll('.magnetic').forEach(btn=>{
+        btn.addEventListener('mousemove', (e)=>{
+          const r = btn.getBoundingClientRect();
+          const x = (e.clientX - r.left - r.width/2) * 0.18;
+          const y = (e.clientY - r.top - r.height/2) * 0.22;
+          btn.style.transform = `translate(${x}px, ${y}px)`;
+        });
+        btn.addEventListener('mouseleave', ()=>{ btn.style.transform = 'translate(0,0)'; });
+      });
+    })();
+    </script>
+
+<!-- Footer -->
     <footer class="border-t border-white/20 mt-20">
-        <div class="container mx-auto px-6 py-8 text-center text-gray-400">
+        <div class="container mx-auto px-6 py-8 text-center text-gray-100">
             <div class="flex justify-center mb-4 space-x-6">
-                <a href="https://www.instagram.com/f_carlitos/" target="_blank" class="hover:text-[#9D40FF] transition-colors"><i class="fab fa-instagram fa-2x"></i></a>
-                <a href="https://www.linkedin.com/in/carlos-mart%C3%ADn-folla-b137301a/" target="_blank" class="hover:text-[#9D40FF] transition-colors"><i class="fab fa-linkedin-in fa-2x"></i></a>
-                <a href="https://github.com/Karlosmf" target="_blank" class="hover:text-[#9D40FF] transition-colors"><i class="fab fa-github fa-2x"></i></a>
-                <a href="mailto:karlosf@gmail.com" class="hover:text-[#9D40FF] transition-colors"><i class="fas fa-envelope fa-2x"></i></a>
+                <a href="https://www.instagram.com/f_carlitos/" target="_blank" class="hover:text-[#2c5aa0] transition-colors"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="https://www.linkedin.com/in/carlos-mart%C3%ADn-folla-b137301a/" target="_blank" class="hover:text-[#2c5aa0] transition-colors"><i class="fab fa-linkedin-in fa-2x"></i></a>
+                <a href="https://github.com/Karlosmf" target="_blank" class="hover:text-[#2c5aa0] transition-colors"><i class="ph ph-github-logo text-[32px]"></i></a>
+                <a href="mailto:karlosf@gmail.com" class="hover:text-[#2c5aa0] transition-colors"><i class="fas fa-envelope fa-2x"></i></a>
             </div>
             <p>&copy; 2025 InnoDesign. Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <!-- Tech Alchemy Custom Cursor & Gradient Effect -->
+    <div id="cursor-trail" class="fixed inset-0 pointer-events-none overflow-hidden opacity-0 sm:opacity-100" style="transition: opacity .3s ease" aria-live="polite">
+      <div id="cursor-inner" class="absolute w-2 h-2 rounded-full bg-[#2c5aa0] transition-transform duration-100" style="will-change: transform;"></div>
+      <div id="cursor-outer" class="absolute w-4 h-4 border-2 border-[#2c5aa0] border-opacity-50 rounded-full transition-transform duration-200 shadow-2xl" style="will-change: transform;"></div>
+      <div id="gradient-orb" class="absolute hidden sm:block top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full opacity-60 transition-all duration-300" style="will-change: transform, opacity;"></div>
+    </div>
+
+    <script>
+    (function() {
+      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reducedMotion) return;
+
+      const cursorInner = document.getElementById('cursor-inner');
+      const cursorOuter = document.getElementById('cursor-outer');
+      const gradientOrb = document.getElementById('gradient-orb');
+      const body = document.body;
+
+      let mouseX = 0, mouseY = 0;
+      let innerX = 0, innerY = 0;
+      let outerX = 0, outerY = 0;
+
+      const updateGradient = (x, y) => {
+        const maxDist = Math.max(window.innerWidth, window.innerHeight);
+        const angle = Math.atan2(y - window.innerHeight/2, x - window.innerWidth/2);
+        const gradientPos = `${((angle / (2 * Math.PI)) + 0.5) * 100}% ${((Math.atan2(y - window.innerHeight/2, x - window.innerWidth/2) / (2 * Math.PI)) + 0.5) * 100}%`;
+        gradientOrb.style.background = `conic-gradient(from ${angle}rad, #2c5aa0, #f5a623, #2c5aa0)`;
+        gradientOrb.style.left = `${x}px`;
+        gradientOrb.style.top = `${y}px`;
+      };
+
+      document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+
+        innerX += (mouseX - innerX) * 0.2;
+        innerY += (mouseY - innerY) * 0.2;
+        cursorInner.style.transform = `translate(${innerX}px, ${innerY}px)`;
+
+        outerX += (mouseX - outerX) * * 0.1;
+        outerY += (mouseY - outerY) * 0.1;
+        cursorOuter.style.transform = `translate(${outerX}px, ${outerY}px)`;
+
+        updateGradient(mouseX, mouseY);
+      });
+
+      // Gradient orb resize on window resize
+      window.addEventListener('resize', () => {
+        updateGradient(window.innerWidth / 2, window.innerHeight / 2);
+      });
+
+      // Hover effects for interactive elements
+      const hoverables = document.querySelectorAll('a, button, .project-card, .service-card');
+      hoverables.forEach(el => {
+        el.addEventListener('mouseenter', () => {
+          cursorInner.style.transform = `translate(${mouseX}px, ${mouseY}px) scale(2)`;
+          cursorOuter.style.transform = `translate(${mouseX}px, ${mouseY}px) scale(3)`;
+          gradientOrb.classList.add('hover');
+        });
+        el.addEventListener('mouseleave', () => {
+          cursorInner.style.transform = `translate(${innerX}px, ${innerY}px)`;
+          cursorOuter.style.transform = `translate(${outerX}px, ${outerY}px) scale(1)`;
+          gradientOrb.classList.remove('hover');
+        });
+      });
+
+      // Click ripple effect
+      document.addEventListener('mousedown', (e) => {
+        const ripple = document.createElement('span');
+        ripple.className = 'absolute inset-0 rounded-full bg-[#2c5aa0] opacity-30 transform scale-0 transition-[transform]duration-300';
+        ripple.style.left = `${e.clientX}px`;
+        ripple.style.top = `${e.clientY}px`;
+        const target = e.target.closest('a, button') || body;
+        target.style.position = 'relative';
+        target.style.overflow = 'hidden';
+        target.appendChild(ripple);
+        setTimeout(() => ripple.remove(), 300);
+      });
+
+      // 3D Background cubes rotation based on scroll
+      (function() {
+        const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (reducedMotion) return;
+
+        const cube1 = document.getElementById('cube-1');
+        const cube2 = document.getElementById('cube-2');
+        let scrollY = 0;
+        let lastScrollY = 0;
+        const ticking = false;
+
+        function updateCubes() {
+          scrollY = window.scrollY;
+          const delta = scrollY - lastScrollY;
+
+          // Rotate cubes based on scroll direction and speed
+          const rotateY1 = delta * 0.5;
+          const rotateX1 = scrollY * 0.1;
+          const rotateY2 = delta * -0.5;
+          const rotateX2 = scrollY * -0.1;
+
+          cube1.style.transform = `rotateX(${rotateX1}deg) rotateY(${rotateY1}deg)`;
+          cube2.style.transform = `rotateX(${rotateX2}deg) rotateY(${rotateY2}deg)`;
+
+          lastScrollY = scrollY;
+          ticking = false;
+        }
+
+        function onScroll() {
+          if (!ticking) {
+            window.requestAnimationFrame(updateCubes);
+            ticking = true;
+          }
+        }
+
+        window.addEventListener('scroll', onScroll, { passive: true });
+
+        // Initial position
+        updateCubes();
+      })();
+    })();
+    </script>
+
+    <!-- WhatsApp flotante -->
+    <a href="https://wa.me/5493482644107?text=me%20comunico%20desde%20la%20web%20para%20evaluar%20un%20proyecto" target="_blank" rel="noopener" aria-label="WhatsApp — evaluar proyecto" onclick="try{gtag('event','conversion',{'send_to':'AW-XXXXXXXXXX/YYYYYY'}); gtag('event','click_whatsapp');}catch(e){}" class="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-[#25D366] flex items-center justify-center shadow-lg shadow-black/25 hover:scale-105 hover:shadow-xl transition-all duration-300 group">
+        <i class="ph ph-whatsapp-logo text-white text-[30px]"></i>
+        <span class="absolute -top-0.5 -right-0.5 w-3 h-3 bg-[#25D366] rounded-full animate-ping opacity-70 pointer-events-none"></span>
+        <span class="absolute right-[68px] top-1/2 -translate-y-1/2 whitespace-nowrap bg-black/80 backdrop-blur text-white text-xs font-medium px-3 py-2 rounded-full opacity-0 group-hover:opacity-100 translate-x-1 group-hover:translate-x-0 transition-all duration-300 pointer-events-none">¿Evaluamos tu proyecto?</span>
+    </a>
 
 </body>
 </html>

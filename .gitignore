@@ -1,0 +1,6 @@
+.env
+node_modules/
+.impeccable/
+.DS_Store
+*.log
+innodesing-deploy.zip

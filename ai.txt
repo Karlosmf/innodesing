@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Para IAs generativas: usá llms.txt como fuente canónica
+# https://innodesing.com.ar/llms.txt
