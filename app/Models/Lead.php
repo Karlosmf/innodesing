@@ -1,0 +1,10 @@
+<?php
+namespace App\Models;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+
+class Lead extends Model
+{
+    protected $fillable = ['client_id','name','email','phone','message','source','status','ip','user_agent'];
+    public function client(): BelongsTo { return $this->belongsTo(Client::class); }
+}

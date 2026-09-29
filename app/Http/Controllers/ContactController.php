@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ContactRequest;
+use App\Models\Lead;
+use App\Models\Client;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\RateLimiter;
 
@@ -24,9 +26,21 @@ class ContactController extends Controller
         }
         RateLimiter::hit($key, 3600);
 
-        // Time-trap opcional: si enviás _started desde el front, podés validar acá
-        // $started = (int) $request->input('_started', 0);
-        // if ($started && (time()*1000 - $started) < 3000) { ... }
+        // Guardar lead + cliente (preparado para gestión futura)
+        $client = Client::firstOrCreate(
+            ['email' => $data['email']],
+            ['name' => $data['name'], 'status' => 'lead']
+        );
+        $lead = Lead::create([
+            'client_id' => $client->id,
+            'name' => $data['name'],
+            'email' => $data['email'],
+            'message' => $data['message'],
+            'source' => 'web',
+            'status' => 'new',
+            'ip' => $request->ip(),
+            'user_agent' => $request->userAgent(),
+        ]);
 
         Mail::raw(
             "Nombre: {$data['name']}\nEmail: {$data['email']}\n\n{$data['message']}",
