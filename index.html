@@ -311,6 +311,24 @@
             text-shadow: 0 0 8px rgba(245,166,35,0.65);
         }
         @keyframes cursorBlink { 0%,50% { opacity: 1 } 51%,100% { opacity: 0 } }
+        /* FAQ — animación slow */
+        #faq details { overflow: hidden; }
+        #faq details > summary { list-style: none; }
+        #faq details > summary::-webkit-details-marker { display: none; }
+        #faq details > p {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transform: translateY(-6px);
+            transition: max-height 0.52s cubic-bezier(0.22,1,0.36,1), opacity 0.38s ease, transform 0.38s ease, margin-top 0.38s ease;
+            margin: 0;
+        }
+        #faq details[open] > p {
+            max-height: 320px;
+            opacity: 1;
+            transform: translateY(0);
+            margin-top: 0.75rem;
+        }
         /* efecto split por letra para hero */
         .char { display: inline-block; will-change: transform, opacity; }
         /* 2026 — spotlight sutil hero + magnetic buttons */
@@ -387,11 +405,49 @@
                 <a href="#faq" class="hover:text-[#2c5aa0] transition-colors duration-300">FAQ</a>
             </div>
             <!-- CTA Button -->
-<a href="#contacto" class="magnetic hidden md:block bg-amber-600 text-white font-semibold px-5 py-2 rounded-lg transition-colors duration-300 hover:shadow-xl hover:bg-amber-500 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2">
-                            Contacto
-                        </a>
-        </nav>
-    </header>
+ <a href="#contacto" class="magnetic hidden md:block bg-amber-600 text-white font-semibold px-5 py-2 rounded-lg transition-colors duration-300 hover:shadow-xl hover:bg-amber-500 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-amber-600 focus:ring-offset-2">
+                             Contacto
+                         </a>
+            <!-- Hamburguesa mobile -->
+            <button id="menu-toggle" class="md:hidden p-2 rounded-lg text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/20" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+                <i class="ph ph-list text-2xl" id="menu-icon-open"></i>
+                <i class="ph ph-x text-2xl hidden" id="menu-icon-close"></i>
+            </button>
+         </nav>
+         <!-- Mobile menu -->
+         <div id="mobile-menu" class="hidden md:hidden border-t border-white/10 bg-black/60 backdrop-blur-lg">
+             <div class="container mx-auto px-6 py-4 flex flex-col gap-1">
+                 <a href="#servicios" class="py-2.5 px-3 rounded-lg text-gray-100 hover:text-white hover:bg-white/10 transition-colors">Servicios</a>
+                 <a href="#portafolio" class="py-2.5 px-3 rounded-lg text-gray-100 hover:text-white hover:bg-white/10 transition-colors">Portafolio</a>
+                 <a href="#how-we-work" class="py-2.5 px-3 rounded-lg text-gray-100 hover:text-white hover:bg-white/10 transition-colors">Proceso</a>
+                 <a href="#clientes" class="py-2.5 px-3 rounded-lg text-gray-100 hover:text-white hover:bg-white/10 transition-colors">Clientes</a>
+                 <a href="#faq" class="py-2.5 px-3 rounded-lg text-gray-100 hover:text-white hover:bg-white/10 transition-colors">FAQ</a>
+                 <a href="#contacto" class="mt-2 inline-flex justify-center bg-amber-600 text-white font-semibold px-5 py-2.5 rounded-full hover:bg-amber-500 transition-colors">Contacto</a>
+             </div>
+         </div>
+     </header>
+     <script>
+     (function(){
+       const toggle = document.getElementById('menu-toggle');
+       const menu = document.getElementById('mobile-menu');
+       const openIcon = document.getElementById('menu-icon-open');
+       const closeIcon = document.getElementById('menu-icon-close');
+       if(!toggle || !menu) return;
+       toggle.addEventListener('click', ()=>{
+         const expanded = toggle.getAttribute('aria-expanded') === 'true';
+         toggle.setAttribute('aria-expanded', String(!expanded));
+         menu.classList.toggle('hidden');
+         openIcon.classList.toggle('hidden');
+         closeIcon.classList.toggle('hidden');
+       });
+       menu.querySelectorAll('a').forEach(a=>a.addEventListener('click', ()=>{
+         menu.classList.add('hidden');
+         toggle.setAttribute('aria-expanded','false');
+         openIcon.classList.remove('hidden');
+         closeIcon.classList.add('hidden');
+       }));
+     })();
+     </script>
 
     <!-- Hero Section Full Width -->
     <section id="home" class="relative min-h-[80vh] flex items-center justify-center overflow-hidden" style="background: var(--bg-gradient);">
@@ -525,7 +581,7 @@
                     <div class="bg-black/20 backdrop-blur-lg border border-white/10 rounded-2xl p-6">
                         <h3 class="text-xl font-bold text-white mb-1">Carlos — Desarrollador Front-end</h3>
                         <p class="font-jetbrains text-xs tracking-widest uppercase text-[#f5a623] mb-3">Avellaneda · En formación constante</p>
-                        <p class="text-gray-100 text-sm mb-4 leading-relaxed">Nuevo en el rubro, con capacitación constante y foco en interfaces intuitivas y animaciones cuidadas. Cada detalle visual está pensado para que la interacción fluya y guíe al usuario hacia sus objetivos.</p>
+                        <p class="text-gray-100 text-sm mb-4 leading-relaxed">En capacitación constante y con foco en interfaces intuitivas y animaciones cuidadas. Cada detalle visual está pensado para que la interacción fluya y guíe al usuario hacia sus objetivos.</p>
                         <ul class="list-disc list-inside text-gray-100 space-y-1.5 text-sm">
                             <li>Diseño visual estratégico</li>
                             <li>Animaciones y microinteracciones</li>
@@ -990,6 +1046,19 @@
                 </div>
             </div>
         </section>
+        <script>
+        // FAQ — slow + una abierta a la vez
+        (function(){
+          const details = document.querySelectorAll('#faq details');
+          details.forEach(d=>{
+            d.addEventListener('toggle', ()=>{
+              if(d.open){
+                details.forEach(o=>{ if(o!==d && o.open) o.removeAttribute('open'); });
+              }
+            });
+          });
+        })();
+        </script>
         <script type="application/ld+json">
         {
           "@context":"https://schema.org",
